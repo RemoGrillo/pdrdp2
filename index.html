@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piano di Rinascita Democratica — P2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FAFAF7;--bg2:#F4F0E8;--bg3:#EDEAE0;
+  --border:#E4DDD4;--border2:#D5CEC4;
+  --text:#1A1A18;--muted:#888880;--faint:#B8B4AC;--faint2:#D0CCC4;
+  --green:#7DB870;--green-fill:#D4EDCC;
+  --amber:#B07820;--amber-bg:#FDF5E4;--amber-border:#E8D090;
+  --nav-h:60px;--bar-h:4px;
+}
+html{font-size:15px}
+body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+
+/* ── SPINNER ─────────────────────────────────────────────────────────────────*/
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(400%)}}
+@keyframes fade-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAVBAR ──────────────────────────────────────────────────────────────────*/
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:var(--nav-h);
+  background:rgba(250,250,247,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;
+  padding:0 2.5rem;gap:1.8rem;
+}
+.nav-logo{height:36px;width:auto;flex-shrink:0;object-fit:contain}
+.nav-brand{display:flex;flex-direction:column;gap:.12rem;flex:1;min-width:0}
+.nav-title{font-size:1.4rem;font-weight:400;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sub{font-size:.68rem;font-weight:300;color:var(--faint);letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-right{display:flex;align-items:center;gap:1rem;flex-shrink:0}
+.snap-date{font-size:.65rem;color:var(--faint);font-weight:300}
+.legend-btn{font-family:inherit;font-size:.7rem;color:var(--muted);background:none;border:1px solid var(--border);border-radius:4px;padding:.28rem .7rem;cursor:pointer;transition:border-color .15s,color .15s}
+.legend-btn:hover{border-color:var(--muted);color:var(--text)}
+/* ── ABOUT MODAL ─────────────────────────────────────────────────────────────*/
+.about-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.22);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .22s ease;display:flex;align-items:center;justify-content:center}
+.about-overlay.open{opacity:1;pointer-events:auto}
+.about-panel{background:#fff;border-radius:12px;width:min(680px,94vw);max-height:88vh;display:flex;flex-direction:column;box-shadow:0 16px 60px rgba(0,0,0,.16);overflow:hidden}
+.about-header{display:flex;align-items:center;padding:1.3rem 1.8rem 1.1rem;border-bottom:1px solid var(--border);flex-shrink:0}
+.about-title{flex:1;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.about-close{background:none;border:none;color:var(--faint);cursor:pointer;font-size:1.1rem;line-height:1;padding:.3rem .5rem;border-radius:4px;transition:color .15s,background .15s}
+.about-close:hover{color:var(--text);background:var(--bg2)}
+.about-body{overflow-y:auto;padding:1.8rem 1.8rem 2.2rem;flex:1}
+.about-body h2{font-size:.62rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:1.6rem 0 .65rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+.about-body h2:first-child{margin-top:0}
+.about-body p{font-size:.82rem;font-weight:300;line-height:1.65;color:var(--text);margin-bottom:.7rem}
+.about-body ul{padding-left:1.2rem;margin-bottom:.7rem}
+.about-body li{font-size:.8rem;font-weight:300;line-height:1.6;color:var(--text);margin-bottom:.2rem}
+.about-body li strong{font-weight:500}
+.about-note{font-size:.72rem;font-weight:300;color:var(--muted);font-style:italic;line-height:1.5;margin-top:1.2rem;padding:.8rem 1rem;background:var(--bg2);border-radius:6px;border-left:3px solid var(--border2)}
+.about-epigraph{margin-bottom:1.6rem;padding:1rem 1.2rem 1rem 1.4rem;border-left:3px solid var(--border2);background:var(--bg2);border-radius:0 6px 6px 0}
+.about-epigraph-quote{font-size:.95rem;font-weight:300;font-style:italic;color:var(--text);line-height:1.5}
+.about-epigraph-attr{margin-top:.5rem;font-size:.68rem;font-weight:400;color:var(--muted);letter-spacing:.02em}
+
+/* ── PROGRESS BAR FULL WIDTH ─────────────────────────────────────────────────*/
+.progress-bar-wrap{
+  position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;
+  height:var(--bar-h);
+  background:var(--border);
+}
+.progress-bar-wrap{display:flex}
+.progress-seg{height:100%;transition:width 1.4s ease;flex-shrink:0}
+.seg-real{background:#4E9445}
+.seg-parz{background:#A8D09C}
+.seg-corso{background:#D04040}
+.seg-tent{background:#C2BAB0}
+/* Shimmer on the remaining (background) portion */
+.progress-bar-wrap::after{
+  content:'';
+  position:absolute;
+  top:0;bottom:0;
+  width:18%;
+  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.6) 50%,transparent 100%);
+  animation:shimmer 2.2s ease-in-out infinite;
+  z-index:1;pointer-events:none;
+}
+
+/* ── PAGE OFFSET ─────────────────────────────────────────────────────────────*/
+.page-body{padding-top:calc(var(--nav-h) + var(--bar-h));}
+
+/* ── CONTROLS ────────────────────────────────────────────────────────────────*/
+.controls{
+  padding:.8rem 2.5rem;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
+  background:var(--bg);
+}
+.ctrl-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint)}
+.sort-group{display:flex;border:1px solid var(--border);border-radius:5px;overflow:hidden}
+.sort-btn{
+  font-family:inherit;font-size:.68rem;color:var(--muted);background:none;
+  border:none;border-right:1px solid var(--border);
+  padding:.3rem .85rem;cursor:pointer;white-space:nowrap;transition:background .1s,color .1s;
+}
+.sort-btn:last-child{border-right:none}
+.sort-btn:hover{background:var(--bg2);color:var(--text)}
+.sort-btn.active{background:var(--text);color:var(--bg)}
+
+/* ── PAGE LAYOUT (left panel + checklist) ────────────────────────────────────*/
+.page-layout{display:flex;align-items:flex-start}
+
+/* ── LEFT PANEL ──────────────────────────────────────────────────────────────*/
+.left-panel{
+  width:200px;flex-shrink:0;
+  position:sticky;top:calc(var(--nav-h) + var(--bar-h));
+  height:calc(100vh - var(--nav-h) - var(--bar-h));
+  overflow-y:auto;overflow-x:hidden;
+  padding:1.6rem 1.2rem 2rem 2.2rem;
+  border-right:1px solid var(--border);
+}
+.lp-sec{margin-bottom:1.8rem}
+.lp-sec-title{
+  font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;
+  color:var(--faint);margin-bottom:.7rem;font-weight:400;
+}
+.lp-stat-list{display:flex;flex-direction:column;gap:.45rem}
+.lp-stat-item{display:flex;align-items:center;gap:.6rem}
+.lp-stat-label{font-size:.72rem;font-weight:300;color:var(--muted);flex:1}
+.lp-stat-count{
+  font-size:.7rem;font-weight:500;color:var(--text);
+  min-width:18px;text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+.lp-stat-count.zero{color:var(--faint);font-weight:300}
+.lp-stat-note{font-size:.58rem;font-weight:300;color:var(--faint);line-height:1.45;font-style:italic;margin-top:.5rem;padding-right:.2rem}
+.lp-area-list{display:flex;flex-direction:column;gap:.18rem}
+.lp-area-item{
+  display:flex;align-items:center;gap:.55rem;
+  cursor:pointer;border-radius:3px;
+  padding:.22rem .35rem;margin-left:-.35rem;
+  transition:background .12s;
+  user-select:none;
+}
+.lp-area-item:hover{background:var(--bg2)}
+.lp-area-item.active{background:var(--bg3)}
+.lp-area-item.active .lp-area-label{color:var(--text);font-weight:400}
+.lp-area-item.dimmed{opacity:.4}
+.lp-area-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.lp-area-label{font-size:.7rem;font-weight:300;color:var(--muted);transition:color .12s,font-weight .12s}
+
+/* ── CHECKLIST ───────────────────────────────────────────────────────────────*/
+.checklist{
+  list-style:none;
+  flex:1;max-width:780px;
+  margin:0;
+  padding:0 2.5rem 0 2.5rem;
+}
+.checklist-item{
+  display:flex;align-items:flex-start;gap:1.2rem;
+  padding:1.4rem 0;
+  border-bottom:1px solid var(--border);
+  cursor:pointer;position:relative;
+  opacity:0;transform:translateY(6px);
+  transition:opacity .38s ease,transform .38s ease,background .12s;
+  border-radius:4px;
+}
+.checklist-item.vis{opacity:1;transform:translateY(0)}
+.checklist-item:hover,.checklist-item.sel{
+  background:var(--bg2);
+  margin:0 -.8rem;
+  padding-left:.8rem;padding-right:.8rem;
+}
+/* arrow pointing to sidebar */
+.checklist-item.sel::after{
+  content:'';position:absolute;right:-.45rem;top:50%;transform:translateY(-50%);
+  width:0;height:0;
+  border-left:8px solid var(--bg2);
+  border-top:6px solid transparent;border-bottom:6px solid transparent;
+}
+
+.item-date{width:2.8rem;flex-shrink:0;font-size:.65rem;font-weight:300;color:var(--faint2);text-align:right;line-height:1.2;align-self:center;font-variant-numeric:tabular-nums}
+.item-icon-wrap{width:52px;flex-shrink:0;padding-top:.15rem;display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.item-failed-count{font-size:.55rem;color:#C07020;font-weight:400;text-align:center;line-height:1.3;max-width:52px;word-break:normal;white-space:normal}
+.status-icon{display:block}
+
+.item-body{flex:1;min-width:0}
+.item-title{
+  font-size:1.25rem;font-weight:400;line-height:1.35;
+  color:var(--text);margin-bottom:.38rem;
+}
+.item-meta{
+  display:flex;align-items:center;gap:.55rem;
+  font-size:.68rem;font-weight:300;color:var(--faint);
+}
+.item-meta-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.item-meta-sep{color:var(--faint2)}
+.item-right{
+  flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;
+  gap:.45rem;align-self:center;
+}
+.item-id{
+  font-size:.65rem;color:var(--faint2);font-weight:300;font-variant-numeric:tabular-nums;
+}
+.item-people{display:flex;align-items:center}
+.item-pip{
+  width:24px;height:24px;border-radius:50%;overflow:hidden;
+  border:2px solid var(--bg);
+  background:#D0C8C0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:7px;font-weight:600;color:#555;letter-spacing:-.3px;
+  margin-left:-7px;flex-shrink:0;
+  box-shadow:0 1px 3px rgba(0,0,0,.12);
+}
+.item-pip:first-child{margin-left:0}
+.item-pip img{width:100%;height:100%;object-fit:cover;object-position:center top}
+
+/* TU SEI QUI — absolute overlay */
+.you-badge{
+  position:absolute;
+  left:calc(100% + 10px);top:50%;transform:translateY(-50%);
+  white-space:nowrap;
+  font-size:.62rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:#fff;background:#C82828;
+  border-radius:4px;
+  padding:.32rem .7rem;
+  pointer-events:none;z-index:2;
+  box-shadow:0 1px 5px rgba(180,0,0,.28);
+}
+.you-badge::before{
+  content:'';position:absolute;
+  right:100%;top:50%;transform:translateY(-50%);
+  border-top:6px solid transparent;border-bottom:6px solid transparent;
+  border-right:6px solid #C82828;
+}
+
+/* ── SIDEBAR OVERLAY ─────────────────────────────────────────────────────────*/
+.sb-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.18);z-index:200;
+  opacity:0;pointer-events:none;transition:opacity .28s ease;
+}
+.sb-backdrop.on{opacity:1;pointer-events:auto}
+
+.sidebar{
+  position:fixed;top:0;right:0;bottom:0;z-index:201;
+  width:676px;max-width:100vw;
+  background:#fff;
+  box-shadow:-4px 0 30px rgba(0,0,0,.1);
+  display:flex;flex-direction:column;
+  transform:translateX(100%);
+  transition:transform .3s cubic-bezier(.32,.72,0,1);
+  overflow:hidden;
+}
+.sidebar.open{transform:translateX(0)}
+
+/* Sidebar header bar */
+.sb-topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.4rem;border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.sb-close{
+  font-family:inherit;font-size:1.2rem;line-height:1;color:var(--faint);
+  background:none;border:none;cursor:pointer;padding:.2rem .4rem;
+  border-radius:3px;transition:color .12s,background .12s;
+}
+.sb-close:hover{color:var(--text);background:var(--bg2)}
+.sb-id{font-size:.65rem;color:var(--faint);font-weight:300}
+
+/* Sidebar scroll area */
+.sb-scroll{flex:1;overflow-y:auto;overscroll-behavior:contain}
+
+/* People strip at top */
+.sb-people-strip{
+  padding:0;
+  border:none;
+  background:none;
+  margin-bottom:1.5rem;
+}
+.sb-people-title{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:.75rem}
+.people-list{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .7rem}
+.person-card{
+  display:flex;align-items:center;gap:.55rem;
+  padding:.25rem .35rem;border-radius:5px;
+  text-decoration:none;color:inherit;
+  transition:background .12s;min-width:0;
+}
+.person-card:hover{background:var(--bg2)}
+.person-avatar{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--bg2);border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;font-weight:500;color:var(--muted);
+  flex-shrink:0;text-transform:uppercase;overflow:hidden;
+}
+.person-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.person-info{flex:1;min-width:0}
+.person-name{font-size:.75rem;font-weight:500;color:var(--text);line-height:1.3;margin-bottom:.1rem}
+.person-ruolo{font-size:.62rem;font-weight:300;color:var(--muted);line-height:1.35;font-style:italic}
+
+/* Sidebar body sections */
+.sb-body{padding:1.2rem 1.4rem}
+.sb-area-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem}
+.sb-area-dot{width:7px;height:7px;border-radius:50%}
+.sb-area-label{font-size:.63rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.sb-title{font-size:1.3rem;font-weight:500;line-height:1.3;margin-bottom:.65rem}
+.sb-status-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.65rem;padding:.22rem .6rem;border-radius:20px;margin-bottom:1.2rem;
+}
+.s-incorso{background:#FAE8E8;color:#7A2020;border:1px solid #E8A0A0}
+.s-real{background:#E0F0D8;color:#2A6A24}
+.s-parz{background:#F0EAD4;color:#7A6030}
+.s-tent{background:#FDF0E0;color:#7A4810;border:1px solid #E8C080}
+.s-prop{background:#EBEBEB;color:#666}
+
+.sb-sec{margin-bottom:1.5rem}
+.sb-sec-lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.11em;color:var(--faint);margin-bottom:.45rem}
+.sb-sintesi{font-size:.83rem;font-weight:300;line-height:1.7;color:var(--text)}
+.sb-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+.sb-two-col .sb-sec{margin-bottom:0}
+.sb-motiv{font-size:.79rem;font-weight:300;line-height:1.65;color:var(--text);background:var(--bg2);padding:.8rem 1rem;border-radius:4px;border-left:2.5px solid var(--border2)}
+.you-note{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:4px;padding:.65rem .9rem;font-size:.76rem;font-weight:300;line-height:1.6;color:#7A5820;margin-bottom:1.2rem}
+.you-note strong{font-weight:500;display:block;margin-bottom:.18rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.06em}
+
+.estratti{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.estratto{font-size:.75rem;font-style:normal;font-weight:400;font-family:'Courier New',Courier,monospace;color:var(--muted);padding:.45rem .8rem;background:#FEFCF5;border-left:2px solid #D8C88A;line-height:1.6}
+
+/* Timeline */
+.timeline{display:flex;flex-direction:column;position:relative}
+.timeline::before{content:'';position:absolute;left:9px;top:10px;bottom:10px;width:1px;background:var(--border)}
+.tl-item{display:flex;gap:.75rem;position:relative;padding-bottom:1.1rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{width:19px;height:19px;border-radius:50%;flex-shrink:0;position:relative;z-index:1;margin-top:1px}
+.tl-r{flex:1}
+.tl-date{font-size:.65rem;font-weight:500;color:var(--muted);margin-bottom:.1rem;font-variant-numeric:tabular-nums}
+.tl-tipo{display:inline-block;font-size:.57rem;text-transform:uppercase;letter-spacing:.06em;padding:.07rem .36rem;border-radius:2px;margin-bottom:.26rem}
+.tl-desc{font-size:.76rem;font-weight:300;line-height:1.55;color:var(--text);margin-bottom:.18rem}
+.tl-esito{font-size:.67rem;color:var(--muted);font-style:italic}
+.tl-srcs{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.3rem}
+.tl-src{font-size:.6rem;color:var(--faint);text-decoration:none;border-bottom:1px solid var(--border);transition:color .12s}
+.tl-src:hover{color:var(--muted)}
+
+/* Sources */
+.sources{display:flex;flex-direction:column;gap:.3rem}
+.src-link{font-size:.7rem;font-weight:300;color:var(--muted);text-decoration:none;word-break:break-all;padding:.25rem 0;border-bottom:1px solid var(--border);transition:color .12s;line-height:1.4;display:flex;align-items:flex-start;gap:.4rem}
+.src-link::before{content:'↗';font-size:.62rem;flex-shrink:0;margin-top:.05rem;opacity:.45}
+.src-link:hover{color:var(--text)}
+
+/* ── ESTRATTI CLICKABLE ──────────────────────────────────────────────────────*/
+.estratto.clickable{cursor:pointer;transition:background .12s,border-color .12s}
+.estratto.clickable:hover{background:#FFF8E4;border-left-color:#B8A060}
+.estratto.clickable::after{content:' ↗';font-size:.7em;opacity:.4;font-family:sans-serif}
+.sb-sec-lbl-row{display:flex;align-items:center;gap:.4rem;margin-bottom:.45rem}
+.sb-sec-lbl-row .sb-sec-lbl{margin-bottom:0}
+.sb-testo-icon{font-size:.7rem;opacity:.45;line-height:1}
+
+/* ── TEXT MODAL ──────────────────────────────────────────────────────────────*/
+.text-modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.52);z-index:600;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .22s ease;
+}
+.text-modal-overlay.open{opacity:1;pointer-events:auto}
+.text-modal-panel{
+  background:#fff;width:min(880px,96vw);height:90vh;
+  border-radius:8px;display:flex;flex-direction:column;
+  box-shadow:0 12px 60px rgba(0,0,0,.22);
+  animation:fade-up .22s ease;
+}
+.text-modal-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.5rem;border-bottom:1px solid var(--border);flex-shrink:0;
+  gap:1rem;
+}
+.text-modal-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:400}
+.text-modal-close{
+  font-family:inherit;font-size:1.1rem;line-height:1;color:var(--faint);
+  background:none;border:none;cursor:pointer;padding:.2rem .4rem;
+  border-radius:3px;transition:color .12s,background .12s;flex-shrink:0;
+}
+.text-modal-close:hover{color:var(--text);background:var(--bg2)}
+.text-modal-body{
+  flex:1;overflow-y:auto;overscroll-behavior:contain;
+  padding:0;
+  color:var(--text);
+  font-family:'Roboto',sans-serif;
+}
+
+/* ── PIANO DOC STYLES (inside modal) ────────────────────────────────────────*/
+.piano-doc{padding:2rem 2.8rem 3rem;max-width:780px;margin:0 auto}
+.piano-doc-header{padding-bottom:1.8rem;margin-bottom:2rem;border-bottom:2px solid var(--text)}
+.piano-doc-title{font-size:1.3rem;font-weight:500;letter-spacing:-.02em;margin-bottom:.3rem}
+.piano-doc-meta{font-size:.7rem;font-weight:300;color:var(--muted);letter-spacing:.06em}
+.piano-section{margin-bottom:3rem}
+.piano-h2{
+  font-size:.65rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--muted);margin-bottom:1.2rem;padding-bottom:.5rem;
+  border-bottom:1px solid var(--border);
+}
+.piano-h3{font-size:.88rem;font-weight:500;margin:1.4rem 0 .7rem;color:var(--text)}
+.piano-h4{font-size:.8rem;font-weight:500;margin:1.1rem 0 .5rem;color:var(--muted)}
+.piano-letter{color:var(--faint);margin-right:.35rem;font-weight:300}
+.piano-intro{font-size:.83rem;font-weight:300;line-height:1.75;color:var(--text);margin-bottom:.85rem}
+.piano-item{display:flex;gap:1rem;margin-bottom:1.4rem;align-items:flex-start}
+.piano-item-num{
+  font-size:.68rem;font-weight:500;color:var(--faint);
+  min-width:1.4rem;flex-shrink:0;padding-top:.22rem;font-variant-numeric:tabular-nums;
+}
+.piano-item-body{flex:1;min-width:0}
+.piano-item-body p,.piano-item-body .piano-item-title{
+  font-size:.83rem;font-weight:300;line-height:1.75;margin-bottom:.6rem;
+}
+.piano-item-title{font-weight:500!important;color:var(--text)!important}
+.piano-subsec{margin-bottom:1.8rem;padding-left:1rem;border-left:2px solid var(--border)}
+.piano-subsubsec{margin-bottom:1.2rem;padding-left:.8rem}
+.piano-ol{padding-left:1.2rem;margin:.4rem 0 .8rem}
+.piano-ol li{font-size:.83rem;font-weight:300;line-height:1.75;margin-bottom:.45rem;color:var(--text)}
+.piano-ol-inner{margin:.4rem 0 .3rem;padding-left:1rem}
+.piano-ol-inner li{font-size:.79rem;margin-bottom:.3rem}
+.piano-inner-p{font-size:.79rem;font-weight:300;line-height:1.7;color:var(--muted);margin:.5rem 0;font-style:italic}
+.piano-ul{list-style:none;padding:0;margin:.4rem 0 .8rem}
+.piano-ul li{
+  font-size:.83rem;font-weight:300;line-height:1.75;
+  padding:.2rem 0 .2rem 1rem;position:relative;margin-bottom:.3rem;
+}
+.piano-ul li::before{content:'—';position:absolute;left:0;color:var(--faint2);font-size:.75rem}
+.piano-lettered li{padding-left:3rem}
+.piano-lettered li::before{display:none}
+.piano-bullet-id{
+  display:inline-block;min-width:2.2rem;font-size:.7rem;
+  font-weight:500;color:var(--muted);margin-right:.3rem;font-variant-numeric:tabular-nums;
+}
+.piano-roman li{padding-left:2.5rem}
+.piano-roman li::before{display:none}
+.piano-roman-id{
+  display:inline-block;min-width:1.8rem;font-size:.7rem;
+  font-weight:500;color:var(--muted);margin-right:.35rem;
+}
+/* Organigramma */
+.piano-section-org .piano-h2{border-bottom-color:var(--text)}
+.piano-org-note{font-size:.73rem;font-weight:300;color:var(--muted);margin-bottom:1.4rem;font-style:italic}
+.piano-org-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem 2.4rem}
+@media(max-width:600px){.piano-org-grid{grid-template-columns:1fr}}
+.piano-org-h{font-size:.62rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.6rem}
+.piano-org-sub{font-size:.68rem;font-weight:300;color:var(--faint);font-style:italic;margin-bottom:.5rem;line-height:1.5}
+.piano-org-list{list-style:none;padding:0;margin:0}
+.piano-org-list li{font-size:.75rem;font-weight:300;line-height:1.6;color:var(--text);padding:.1rem 0;border-bottom:1px solid var(--border)}
+.piano-org-list li:last-child{border-bottom:none}
+.text-modal-body mark{
+  background:#FFE08A;color:inherit;
+  border-radius:3px;padding:.08em .18em;
+  outline:2px solid #E8C840;
+}
+.text-modal-hint{
+  font-size:.63rem;color:var(--faint);font-weight:300;
+  padding:.5rem 1.5rem .7rem;border-top:1px solid var(--border);
+  flex-shrink:0;
+}
+
+/* ── LEGEND ──────────────────────────────────────────────────────────────────*/
+.leg-overlay{position:fixed;inset:0;background:rgba(0,0,0,.18);z-index:300;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(3px)}
+.leg-overlay.open{display:flex}
+.leg-panel{background:#fff;border-radius:10px 10px 0 0;padding:1.8rem 2rem 2.5rem;max-width:560px;width:100%;max-height:82vh;overflow-y:auto;box-shadow:0 -4px 30px rgba(0,0,0,.1)}
+.leg-handle{width:30px;height:3px;background:var(--border);border-radius:2px;margin:0 auto 1.4rem}
+.leg-h{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:1.1rem}
+.leg-sec{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin:.15rem 0 .65rem}
+.leg-status-list{display:flex;flex-direction:column;gap:.85rem}
+.leg-s-item{display:flex;align-items:center;gap:.9rem}
+.leg-s-lbl{font-size:.8rem;font-weight:300}
+.leg-area-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.leg-a-item{display:flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:300}
+.leg-a-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.leg-close{display:block;width:100%;margin-top:1.8rem;padding:.7rem;background:var(--bg2);border:none;border-radius:4px;font-family:inherit;font-size:.78rem;color:var(--muted);cursor:pointer;transition:background .12s}
+.leg-close:hover{background:var(--bg3)}
+
+/* ── PARLIAMENT MODAL ────────────────────────────────────────────────────────*/
+.parl-btn{font-family:inherit;font-size:.7rem;color:var(--muted);background:none;border:1px solid var(--border);border-radius:4px;padding:.28rem .65rem;cursor:pointer;transition:border-color .15s,color .15s;display:flex;align-items:center;gap:.38rem}
+.parl-btn:hover{border-color:var(--muted);color:var(--text)}
+.parl-overlay{position:fixed;inset:0;z-index:250;background:rgba(20,16,10,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .22s ease;display:flex;align-items:center;justify-content:center}
+.parl-overlay.open{opacity:1;pointer-events:auto}
+.parl-panel{background:#F3ECD8;border:1px solid #D8CEAE;border-radius:14px;width:min(1020px,98vw);max-height:97vh;display:flex;flex-direction:column;box-shadow:0 28px 90px rgba(0,0,0,.55);overflow:hidden}
+.parl-header{display:flex;align-items:center;padding:1rem 1.6rem .8rem;border-bottom:1px solid #DDD0B0;gap:1rem;flex-shrink:0;background:#F3ECD8}
+.parl-title{flex:1;font-size:.65rem;font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:#8A7050}
+.parl-close{background:none;border:none;color:#B09878;cursor:pointer;font-size:1.05rem;line-height:1;padding:.3rem .5rem;border-radius:4px;transition:color .15s,background .15s}
+.parl-close:hover{color:#5A4030;background:#E8DFC8}
+/* Balance meter */
+.parl-meter{padding:.55rem 1.6rem .5rem;border-bottom:1px solid #DDD0B0;flex-shrink:0;background:#F3ECD8}
+.parl-meter-track{height:7px;border-radius:4px;background:linear-gradient(to right,#B83040 0%,#D07080 30%,#D0C8A8 50%,#6888BC 72%,#1A3A80 100%);position:relative;margin-bottom:.38rem;box-shadow:inset 0 1px 2px rgba(0,0,0,.12)}
+.parl-meter-mid{position:absolute;left:50%;top:-4px;width:1.5px;height:15px;background:rgba(0,0,0,.18);transform:translateX(-50%)}
+.parl-meter-needle{position:absolute;top:-6px;width:4px;height:19px;background:#1A1200;border-radius:2px;transform:translateX(-50%);transition:left .9s cubic-bezier(.34,1.4,.64,1);box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.parl-meter-foot{display:flex;justify-content:space-between;align-items:center;font-size:.57rem}
+.parl-meter-side{color:#A09070;letter-spacing:.07em;text-transform:uppercase}
+.parl-meter-val{font-size:.68rem;font-weight:500;color:#4A3820}
+.parl-scene{flex:1;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding:.3rem .6rem 0;min-height:0}
+#parl-svg{width:100%;display:block;overflow:visible}
+.parl-footer{border-top:1px solid #DDD0B0;padding:.7rem 1.6rem .9rem;flex-shrink:0;background:#F3ECD8}
+.parl-axis{display:flex;justify-content:space-between;font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;color:#A09070;margin-bottom:.6rem}
+.parl-legend-wrap{display:flex;flex-wrap:wrap;gap:.3rem .8rem}
+.parl-leg-item{display:flex;align-items:center;gap:.38rem;font-size:.6rem;color:#7A6040;font-weight:300}
+.parl-leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+/* Tooltip */
+.parl-tt{position:fixed;background:#1E160C;border:1px solid #3A2A18;border-radius:10px;padding:.8rem 1rem;box-shadow:0 10px 40px rgba(0,0,0,.7);pointer-events:none;opacity:0;transition:opacity .12s;z-index:600;min-width:186px;max-width:250px}
+.parl-tt.vis{opacity:1}
+.parl-tt-top{display:flex;align-items:center;gap:.6rem;margin-bottom:.55rem}
+.parl-tt-avatar{width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#2A1C10;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#8A7050;border:1.5px solid #3A2A18}
+.parl-tt-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.parl-tt-name{font-size:.75rem;font-weight:500;color:#D4C098;line-height:1.3}
+.parl-tt-badge{display:inline-flex;align-items:center;font-size:.58rem;font-weight:600;border-radius:3px;padding:.15rem .45rem;margin-bottom:.38rem;letter-spacing:.02em}
+.parl-tt-spec-label{font-size:.52rem;text-transform:uppercase;letter-spacing:.09em;color:#4A3A24;margin-bottom:.22rem}
+.parl-tt-bar{height:4px;background:#2A1C10;border-radius:2px;position:relative;overflow:visible}
+.parl-tt-bar-fill{height:100%;border-radius:2px}
+.parl-tt-pct{font-size:.55rem;color:#7A5A38;margin-top:.18rem;display:flex;justify-content:space-between}
+.parl-tt-role{font-size:.58rem;color:#5A4A30;line-height:1.45;margin-top:.42rem;border-top:1px solid #2A2018;padding-top:.38rem}
+/* ── MOBILE ──────────────────────────────────────────────────────────────────*/
+@media(max-width:760px){
+  .left-panel{display:none}
+  .checklist{padding:0 1rem;max-width:100%}
+  .checklist-item:hover,.checklist-item.sel{margin:0 -.5rem;padding-left:.5rem;padding-right:.5rem}
+}
+@media(max-width:640px){
+  .navbar{padding:0 1rem;gap:1rem}
+  .nav-sub{display:none}
+  .controls{padding:.65rem 1rem}
+  .sidebar{width:100vw}
+  .sb-body{padding:.9rem 1rem}
+  .sb-people-strip{padding:.9rem 1rem .8rem}
+  .text-modal-panel{width:100vw;height:100dvh;border-radius:0}
+  .piano-doc{padding:1.2rem 1.2rem 2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <img src="logo.png" class="nav-logo" alt="Logo">
+  <div class="nav-brand">
+    <span class="nav-title">Piano di Rinascita Democratica</span>
+    <span class="nav-sub">Loggia P2 · Verifica storica degli obiettivi di riforma</span>
+  </div>
+  <div class="nav-right">
+    <span class="snap-date" id="snap-date"></span>
+    <button class="legend-btn" onclick="openAbout()">About</button>
+    <button class="parl-btn" onclick="openParl()">
+      <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M7.5 1.2C4.2 1.2 1.5 4.2 1.5 7.8L13.5 7.8C13.5 4.2 10.8 1.2 7.5 1.2Z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/><line x1="1.5" y1="9.8" x2="13.5" y2="9.8" stroke="currentColor" stroke-width="1.2"/><line x1="3.5" y1="5.2" x2="3.5" y2="7.8" stroke="currentColor" stroke-width=".9"/><line x1="7.5" y1="3" x2="7.5" y2="7.8" stroke="currentColor" stroke-width=".9"/><line x1="11.5" y1="5.2" x2="11.5" y2="7.8" stroke="currentColor" stroke-width=".9"/></svg>
+      Aula
+    </button>
+    <button class="legend-btn" onclick="openLegend()">Legenda</button>
+  </div>
+</nav>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap">
+  <div class="progress-seg seg-real" id="prog-real" style="width:0%"></div>
+  <div class="progress-seg seg-parz" id="prog-parz" style="width:0%"></div>
+  <div class="progress-seg seg-tent" id="prog-tent" style="width:0%"></div>
+  <div class="progress-seg seg-corso" id="prog-corso" style="width:0%"></div>
+</div>
+
+<div class="page-body">
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;opacity:.4">
+      <line x1="2" y1="4" x2="14" y2="4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="2" y1="8" x2="10" y2="8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="2" y1="12" x2="7" y2="12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <polyline points="12,6 14,4 12,2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div class="sort-group">
+      <button class="sort-btn active" id="sort-default" data-sort="cronologia" onclick="setSort(this)">Cronologia</button>
+      <button class="sort-btn" data-sort="status" onclick="setSort(this)">Stato</button>
+      <button class="sort-btn" data-sort="area" onclick="setSort(this)">Area</button>
+      <button class="sort-btn" data-sort="original" onclick="setSort(this)">Originale</button>
+    </div>
+  </div>
+
+  <div class="page-layout">
+    <aside class="left-panel" id="left-panel"></aside>
+    <!-- CHECKLIST -->
+    <ul class="checklist" id="checklist"></ul>
+  </div>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sb-backdrop" id="sb-backdrop" onclick="closeSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="sb-topbar">
+    <span class="sb-id" id="sb-id-label"></span>
+    <button class="sb-close" onclick="closeSidebar()">✕</button>
+  </div>
+  <div class="sb-scroll" id="sb-scroll">
+    <!-- filled by JS -->
+  </div>
+</aside>
+
+<!-- TEXT MODAL -->
+<div class="text-modal-overlay" id="text-modal" onclick="if(event.target===this)closeTextModal()">
+  <div class="text-modal-panel">
+    <div class="text-modal-header">
+      <span class="text-modal-title">Testo originale — Piano di Rinascita Democratica, Licio Gelli 1975–76</span>
+      <button class="text-modal-close" onclick="closeTextModal()">✕</button>
+    </div>
+    <div class="text-modal-body" id="text-modal-body"></div>
+    <div class="text-modal-hint" id="text-modal-hint"></div>
+  </div>
+</div>
+
+<!-- PARLIAMENT MODAL -->
+<div class="parl-overlay" id="parl-modal" onclick="if(event.target===this)closeParl()">
+  <div class="parl-panel">
+    <div class="parl-header">
+      <span class="parl-title">Aula del Piano — referenti per spettro politico</span>
+      <button class="parl-close" onclick="closeParl()">✕</button>
+    </div>
+    <div class="parl-meter">
+      <div class="parl-meter-track">
+        <div class="parl-meter-mid"></div>
+        <div class="parl-meter-needle" id="parl-needle" style="left:50%"></div>
+      </div>
+      <div class="parl-meter-foot">
+        <span class="parl-meter-side">← Sinistra</span>
+        <span class="parl-meter-val" id="parl-gravity"></span>
+        <span class="parl-meter-side">Destra →</span>
+      </div>
+    </div>
+    <div class="parl-scene">
+      <svg id="parl-svg" viewBox="0 0 860 310" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <div class="parl-footer">
+      <div class="parl-axis">
+        <span>← Sinistra</span>
+        <span>Centro</span>
+        <span>Destra →</span>
+      </div>
+      <div class="parl-legend-wrap" id="parl-legend"></div>
+    </div>
+  </div>
+</div>
+<div class="parl-tt" id="parl-tt"></div>
+
+<!-- ABOUT MODAL -->
+<div class="about-overlay" id="about-modal" onclick="if(event.target===this)closeAbout()">
+  <div class="about-panel">
+    <div class="about-header">
+      <span class="about-title">Informazioni sul progetto</span>
+      <button class="about-close" onclick="closeAbout()">✕</button>
+    </div>
+    <div class="about-body">
+
+      <div class="about-epigraph">
+        <div class="about-epigraph-quote">«Con la riforma della giustizia si realizzano le idee di mio padre»</div>
+        <div class="about-epigraph-attr">— Maurizio Gelli</div>
+      </div>
+
+      <h2>Scopo</h2>
+      <p>Il <em>Piano di Rinascita Democratica</em> fu redatto da Licio Gelli tra il 1975 e il 1976 come documento programmatico della loggia massonica P2. Identificava 21 obiettivi di riforma in campo politico, istituzionale, economico, mediatico e giudiziario, con l'intento di ridisegnare l'architettura del potere in Italia.</p>
+      <p>Questo strumento mappa sistematicamente ciascuno dei 21 punti, verifica in che misura sia stato realizzato nell'Italia repubblicana attraverso leggi, riforme costituzionali e atti parlamentari documentati, e identifica le figure politiche che — consapevolmente o meno — ne hanno perseguito le direttrici.</p>
+      <p>L'analisi è storica e analitica, non giuridica: lo stato assegnato a ciascun punto è una valutazione critica basata su fonti normative e parlamentari, non una certificazione di collusione o di intenzionalità.</p>
+
+      <h2>Cosa non è incluso — le stragi</h2>
+      <p>Il dataset si concentra esclusivamente sugli obiettivi di riforma politico-istituzionale del Piano. Non sono stati inclusi i crimini di strage, sebbene alcune figure vicine alla P2 siano state oggetto di indagine nell'ambito della cosiddetta <em>strategia della tensione</em>.</p>
+      <ul>
+        <li><strong>Strage di Piazza Fontana</strong> — Milano, 12 dicembre 1969</li>
+        <li><strong>Strage della Questura di Milano</strong> — 17 maggio 1973</li>
+        <li><strong>Strage di Piazza della Loggia</strong> — Brescia, 28 maggio 1974</li>
+        <li><strong>Strage dell'Italicus</strong> — treno Roma–Monaco, 4 agosto 1974</li>
+        <li><strong>Strage di Ustica</strong> — aereo Itavia DC-9, 27 giugno 1980</li>
+        <li><strong>Strage della Stazione di Bologna</strong> — 2 agosto 1980</li>
+        <li><strong>Strage del Rapido 904</strong> — "Strage di Natale", 23 dicembre 1984</li>
+      </ul>
+      <p>Queste vicende meriterebbero un'analisi separata e dedicata.</p>
+
+      <h2>Come sono calcolate le cose</h2>
+      <p><strong>Stato di realizzazione</strong> — Ogni punto è classificato su cinque livelli: <em>realizzato</em>, <em>parzialmente realizzato</em>, <em>in corso</em>, <em>tentato</em>, <em>non ancora proposto</em>. La classificazione si basa su leggi approvate, riforme costituzionali, atti parlamentari e sentenze documentate. Non è richiesta una corrispondenza intenzionale tra il Piano e l'atto normativo: è sufficiente la convergenza dell'obiettivo.</p>
+      <p><strong>Spettro politico</strong> — Ogni referente è posizionato su una scala 0–100% (sinistra–destra), assegnata dagli autori in base all'affiliazione partitica e al posizionamento prevalente. 0% = estrema sinistra, 50% = centro, 100% = estrema destra. Il valore è indicativo e non pretende di essere oggettivo.</p>
+      <p><strong>Bilancia politica</strong> — Si sommano i valori di spettro di chi è orientato a destra (&gt; 50%) e di chi è orientato a sinistra (&lt; 50%). La barra indica di quanto la componente destra supera quella sinistra, in termini di peso complessivo dei valori individuali.</p>
+      <p><strong>Timeline</strong> — Ogni punto riporta gli eventi rilevanti in ordine cronologico: proposta, approvazione, tentativo fallito. La data visualizzata nella lista principale è quella dell'ultimo aggiornamento significativo.</p>
+
+      <div class="about-note">Questo progetto è a scopo divulgativo e documentale. Le valutazioni sullo stato di realizzazione sono opinioni degli autori basate su fonti pubbliche. Non si afferma alcun nesso causale diretto tra il Piano P2 e le riforme elencate.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="leg-overlay" id="leg-overlay" onclick="if(event.target===this)closeLegend()">
+  <div class="leg-panel">
+    <div class="leg-handle"></div>
+    <div class="leg-h">Legenda</div>
+    <div class="leg-sec">Stato di realizzazione</div>
+    <div class="leg-status-list" id="leg-status-list"></div>
+    <div class="leg-sec" style="margin-top:1.4rem">Area tematica</div>
+    <div class="leg-area-grid" id="leg-area-grid"></div>
+    <button class="leg-close" onclick="closeLegend()">Chiudi</button>
+  </div>
+</div>
+
+<script>
+// ── CONSTANTS ─────────────────────────────────────────────────────────────────
+const AREA_COLOR={
+  'Media':'#90B4CC',
+  'Lavoro':'#9E8EC8',
+  'Giustizia':'#C08080',
+  'Istituzioni':'#7AAA7A',
+  'Amministrazione e territorio':'#70A898',
+  'Previdenza':'#B09060',
+  'Economia':'#88A870',
+  'Istruzione':'#C09878',
+  'Sanità':'#68A898',
+};
+
+const TIPO_STYLE={
+  'documento':{bg:'#E8E4DC',c:'#5C5850'},
+  'legge':{bg:'#D4EAD0',c:'#265824'},
+  'legge costituzionale':{bg:'#C8DCC8',c:'#205428'},
+  'decreto legislativo':{bg:'#D8D0EC',c:'#362870'},
+  'decreto':{bg:'#D8D0EC',c:'#362870'},
+  'referendum':{bg:'#EADCC4',c:'#643820'},
+  'referendum costituzionale':{bg:'#EADCC4',c:'#643820'},
+  'disegno di legge costituzionale':{bg:'#E8E0C8',c:'#564820'},
+  'proposta di legge costituzionale':{bg:'#E8E0C8',c:'#564820'},
+  'proposta di legge':{bg:'#EDE8D4',c:'#584C28'},
+  'iter parlamentare':{bg:'#D8E4D4',c:'#284A28'},
+  'stato iter':{bg:'#E0E0DC',c:'#484848'},
+  'stato istituzionale':{bg:'#E0E0DC',c:'#484848'},
+  'stato costituzionale':{bg:'#E0E0DC',c:'#484848'},
+  'pubblicazione in G.U.':{bg:'#D0D8EC',c:'#283468'},
+  'assetto amministrativo':{bg:'#E4DCDC',c:'#4C4444'},
+  'riordino gestioni':{bg:'#DDE0DC',c:'#3C4440'},
+  'riforma pensionistica':{bg:'#E0DCD0',c:'#4C4434'},
+  'riforma organizzativa':{bg:'#D8E0DA',c:'#2C4434'},
+  'istituzione':{bg:'#C8EAD8',c:'#185030'},
+  'attuazione amministrativa':{bg:'#E4E0D8',c:'#4C443C'},
+  'politiche di diritto allo studio':{bg:'#EAE0D0',c:'#54442C'},
+  'costituzione':{bg:'#DCDCE8',c:'#383458'},
+};
+const TIPO_DEF={bg:'#E8E4E0',c:'#50484C'};
+function tipoS(t){return TIPO_STYLE[(t||'').toLowerCase()]||TIPO_DEF}
+
+// ── SVG ICONS ─────────────────────────────────────────────────────────────────
+function svgIcon(stato,sz=36){
+  const s=sz,r=10;
+  switch(stato){
+    case 'in corso':
+      return `<svg class="status-icon" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="${r}" fill="none" stroke="#F0D0D0" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="${r}" fill="none" stroke="#D04040" stroke-width="2.2" stroke-dasharray="16 47" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="12" y="16" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#A02020" font-weight="500">✓✓</text>
+      </svg>`;
+    case 'realizzato':
+      return `<svg class="status-icon" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="${r}" fill="#D4EDCC" stroke="#7DB870" stroke-width="1.5"/>
+        <text x="12" y="16.2" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#2A6A24">✓✓</text>
+      </svg>`;
+    case 'parzialmente realizzato':
+      return `<svg class="status-icon" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="${r}" fill="#FFFFFF" stroke="#7DB870" stroke-width="1.5"/>
+        <text x="12" y="16.5" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2A6A24">✓</text>
+      </svg>`;
+    case 'tentato':
+      return `<svg class="status-icon" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="${r}" fill="none" stroke="#E09030" stroke-width="1.8"/>
+        <text x="12" y="16.5" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="400" fill="#C07020">!</text>
+      </svg>`;
+    default:
+      return `<svg class="status-icon" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="${r}" stroke="#C4C0B8" stroke-width="1.2"/>
+      </svg>`;
+  }
+}
+
+// Small icon for badge in sidebar
+function svgIconSm(stato){return svgIcon(stato,15)}
+
+function statusBadgeClass(s){
+  if(s==='in corso') return 's-incorso';
+  if(s==='realizzato') return 's-real';
+  if(s==='parzialmente realizzato') return 's-parz';
+  if(s==='tentato') return 's-tent';
+  return 's-prop';
+}
+function statusLabel(s){
+  const m={'in corso':'In corso','realizzato':'Realizzato','parzialmente realizzato':'Parzialmente realizzato','tentato':'Tentato','non ancora proposto':'Non ancora proposto'};
+  return m[s]||s;
+}
+function initials(nome){
+  const p=nome.trim().split(/\s+/);
+  return p.length===1?p[0][0].toUpperCase():(p[0][0]+p[p.length-1][0]).toUpperCase();
+}
+
+// ── LIST PEOPLE PIPS ──────────────────────────────────────────────────────────
+const wikiCache={};
+function peoplePips(people){
+  if(!people||!people.length) return '';
+  return people.map(p=>{
+    const ini=initials(p.nome);
+    const imgUrl=p.immagine_riferimento_url||'';
+    const isDirectImg=/\.(jpe?g|png|webp|gif)(\?|$)/i.test(imgUrl);
+    const wikiTitle=!isDirectImg&&imgUrl.includes('wikipedia.org/wiki/')?
+      decodeURIComponent((imgUrl.match(/wiki\/([^?#]+)/)||[])[1]||'').replace(/ /g,'_'):'';
+    const cached=wikiTitle&&wikiCache[wikiTitle];
+    const inner=isDirectImg
+      ?`<img src="${imgUrl}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`
+      :cached
+        ?`<img src="${cached}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`
+        :ini;
+    const attrs=wikiTitle&&!cached?` data-wiki="${wikiTitle}" data-init="${ini}"`:'';
+    return `<span class="item-pip"${attrs}>${inner}</span>`;
+  }).join('');
+}
+async function loadListImages(){
+  const els=[...document.querySelectorAll('.item-pip[data-wiki]')];
+  if(!els.length) return;
+  const titles=[...new Set(els.map(e=>e.dataset.wiki))];
+  for(let i=0;i<titles.length;i+=50){
+    const batch=titles.slice(i,i+50);
+    try{
+      const url=`https://it.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(batch.join('|'))}&prop=pageimages&pithumbsize=44&format=json&origin=*`;
+      const resp=await fetch(url,{signal:AbortSignal.timeout(6000)});
+      const data=await resp.json();
+      const pages=data.query?.pages||{};
+      for(const pid in pages){
+        const page=pages[pid];
+        if(!page.thumbnail?.source) continue;
+        const norm=page.title.replace(/ /g,'_');
+        wikiCache[norm]=page.thumbnail.source;
+        document.querySelectorAll(`.item-pip[data-wiki="${norm}"]`).forEach(el=>{
+          const ini=el.dataset.init||'?';
+          el.innerHTML=`<img src="${page.thumbnail.source}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`;
+          el.removeAttribute('data-wiki');
+        });
+      }
+    }catch(e){/* silent */}
+  }
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+function failedAttemptInfo(pt){
+  if(!pt.stato==='tentato'&&pt.stato!=='tentato') return {count:0,date:null};
+  const fails=(pt.timeline||[]).filter(t=>{
+    const e=(t.esito||'').toLowerCase();
+    return e.includes('fallito')||e.includes('non approvato')||e.includes('non approvata')||e.includes('non concluso')||e.includes('tentativo non');
+  });
+  const n=Math.max(1,fails.length);
+  let date=null;
+  if(fails.length){
+    const last=fails[fails.length-1];
+    const m=(last.date||'').match(/(\d{4})/);
+    date=m?m[1]:null;
+  }
+  return {count:n,date};
+}
+
+// ── SORT ──────────────────────────────────────────────────────────────────────
+// Order top→bottom: in corso → tentato → non ancora proposto → parzialmente realizzato → realizzato
+const STATUS_ORDER={'in corso':0,'tentato':1,'non ancora proposto':2,'parzialmente realizzato':3,'realizzato':4};
+
+function lastUpdateDate(pt){
+  if(!pt.timeline) return '0000';
+  let max='0000';
+  for(const t of pt.timeline){
+    const d=(t.date||'').replace('vigente al ','').replace(/[XVI]+\s+legislatura/,'2017');
+    // Extract first 4-digit year
+    const y=(d.match(/(\d{4})/)||[])[1];
+    if(y && y>'1976'){
+      // try to use more of the date string for finer sort
+      const norm=d.replace(/^(\d{4}-\d{2}-\d{2}).*/,'$1');
+      if(norm>max) max=norm;
+    }
+  }
+  return max;
+}
+
+function sortPoints(points,mode){
+  const arr=[...points];
+  if(mode==='cronologia'){
+    arr.sort((a,b)=>lastUpdateDate(b).localeCompare(lastUpdateDate(a)));
+  } else if(mode==='status'){
+    arr.sort((a,b)=>{
+      const sd=(STATUS_ORDER[a.stato]??5)-(STATUS_ORDER[b.stato]??5);
+      if(sd!==0) return sd;
+      return lastUpdateDate(b).localeCompare(lastUpdateDate(a));
+    });
+  } else if(mode==='area'){
+    arr.sort((a,b)=>{
+      const ac=(a.area||'').localeCompare(b.area||'');
+      if(ac!==0) return ac;
+      return (STATUS_ORDER[a.stato]??5)-(STATUS_ORDER[b.stato]??5);
+    });
+  }
+  return arr;
+}
+
+// ── WIKIPEDIA IMAGES ──────────────────────────────────────────────────────────
+async function loadWikiImages(people, containerId){
+  const wikiPeople=people.filter(p=>(p.immagine_riferimento_url||'').includes('wikipedia.org/wiki/'));
+  if(!wikiPeople.length) return;
+  const entries=wikiPeople.map(p=>{
+    const m=p.immagine_riferimento_url.match(/wiki\/([^?#]+)/);
+    return m?{person:p,title:decodeURIComponent(m[1])}:null;
+  }).filter(Boolean);
+  if(!entries.length) return;
+  const titleStr=entries.map(e=>e.title).join('|');
+  try{
+    const url=`https://it.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(titleStr)}&prop=pageimages&pithumbsize=120&format=json&origin=*`;
+    const resp=await fetch(url,{signal:AbortSignal.timeout(5000)});
+    const data=await resp.json();
+    const pages=data.query?.pages||{};
+    for(const pid in pages){
+      const page=pages[pid];
+      if(!page.thumbnail?.source) continue;
+      const imgSrc=page.thumbnail.source;
+      const normTitle=page.title.replace(/ /g,'_');
+      const el=document.querySelector(`#${containerId} [data-wiki="${normTitle}"]`);
+      if(el){
+        el.innerHTML=`<img src="${imgSrc}" alt="${page.title}" onerror="this.parentElement.textContent=this.parentElement.dataset.init||'?'">`;
+      }
+    }
+  }catch(e){/* silent fail */}
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+let allPoints=[], allPeople=[], currentSort='cronologia', selectedId=null, activeAreaFilter=null;
+
+function renderList(){
+  const ul=document.getElementById('checklist');
+  ul.innerHTML='';
+  const pts=activeAreaFilter?allPoints.filter(p=>p.area===activeAreaFilter):allPoints;
+  const sorted=sortPoints(pts,currentSort);
+  sorted.forEach((pt,i)=>{
+    const isYou=pt.point_id==='PRD-05';
+    const areaColor=AREA_COLOR[pt.area]||'#AAA';
+    const lastDate=lastUpdateDate(pt);
+    const lastDateDisplay=lastDate!=='0000'?lastDate.substring(0,4):'—';
+
+    const li=document.createElement('li');
+    li.className='checklist-item'+(selectedId===pt.point_id?' sel':'');
+    li.dataset.id=pt.point_id;
+    li.style.transitionDelay=`${i*22}ms`;
+    const {count:failedN,date:failedDate}=pt.stato==='tentato'?failedAttemptInfo(pt):{count:0,date:null};
+    const failedLine=failedN?(failedN===1?'tentativo':`${failedN} tentativi`)+(failedDate?`<br>(${failedDate})`:''): '';
+    li.innerHTML=`
+      ${isYou?'<span class="you-badge">tu sei qui</span>':''}
+      <span class="item-date">${lastDateDisplay}</span>
+      <span class="item-icon-wrap">
+        ${svgIcon(pt.stato,36)}
+        ${failedLine?`<span class="item-failed-count">${failedLine}</span>`:''}
+      </span>
+      <span class="item-body">
+        <span class="item-title">${pt.titolo}</span>
+        <span class="item-meta">
+          <span class="item-meta-dot" style="background:${areaColor}"></span>
+          <span>${pt.area}</span>
+        </span>
+      </span>
+      <span class="item-right">
+        ${pt.people&&pt.people.length?`<span class="item-people">${peoplePips(pt.people)}</span>`:''}
+        <span class="item-id">${pt.point_id}</span>
+      </span>
+    `;
+    li.addEventListener('click',()=>openSidebar(pt.point_id));
+    ul.appendChild(li);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>li.classList.add('vis')));
+  });
+  loadListImages();
+}
+
+// ── SIDEBAR OPEN/CLOSE ────────────────────────────────────────────────────────
+function openSidebar(id){
+  selectedId=id;
+  document.querySelectorAll('.checklist-item').forEach(el=>el.classList.toggle('sel',el.dataset.id===id));
+  const pt=allPoints.find(p=>p.point_id===id);
+  if(!pt) return;
+  renderSidebarContent(pt);
+  document.getElementById('sb-id-label').textContent=pt.point_id;
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sb-backdrop').classList.add('on');
+  document.getElementById('sb-scroll').scrollTop=0;
+  document.body.style.overflow='hidden';
+}
+function closeSidebar(){
+  selectedId=null;
+  document.querySelectorAll('.checklist-item').forEach(el=>el.classList.remove('sel'));
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sb-backdrop').classList.remove('on');
+  document.body.style.overflow='';
+}
+
+// ── SIDEBAR CONTENT ───────────────────────────────────────────────────────────
+const YOU_NOTES={
+  'PRD-05':'<strong>▸ In corso — referendum 22–23 marzo 2026</strong>Testo di legge costituzionale approvato in seconda votazione (G.U. 30.10.2025), sospeso all\'esito del referendum confermativo del 22–23 marzo 2026.',
+  'PRD-06':'<strong>▸ In corso — iter alla Camera</strong>Il ddl A.C. 1921 sul premierato risulta ancora in esame in Commissione alla Camera al 17 marzo 2026.',
+};
+function renderSidebarContent(pt){
+  const isYou=pt.point_id in YOU_NOTES;
+  const areaColor=AREA_COLOR[pt.area]||'#AAA';
+  const sbScrollId='sb-scroll';
+
+  // People strip
+  const peopleStripHtml=(pt.people&&pt.people.length)?`
+    <div class="sb-people-strip">
+      <div class="sb-people-title">Persone collegate</div>
+      <div class="people-list" id="people-row-${pt.point_id}">
+        ${(pt.people||[]).map(p=>{
+          const imgUrl=p.immagine_riferimento_url||'';
+          const isDirectImg=/\.(jpe?g|png|webp|gif)(\?|$)/i.test(imgUrl);
+          const wikiTitle=!isDirectImg&&imgUrl.includes('wikipedia.org/wiki/')?
+            decodeURIComponent((imgUrl.match(/wiki\/([^?#]+)/)||['',''])[1]).replace(/ /g,'_'):'';
+          const ini=initials(p.nome);
+          const href=p.link_url||(isDirectImg?'#':imgUrl)||'#';
+          const avatarInner=isDirectImg
+            ?`<img src="${imgUrl}" alt="${p.nome}" onerror="this.parentElement.textContent=this.parentElement.dataset.init||'?'">`
+            :ini;
+          return `<a class="person-card" href="${href}" target="_blank" rel="noopener">
+            <div class="person-avatar" ${wikiTitle?`data-wiki="${wikiTitle}"`:''}data-init="${ini}">${avatarInner}</div>
+            <div class="person-info">
+              <div class="person-name">${p.nome}</div>
+              <div class="person-ruolo">${p.ruolo||p.titolo_persona||''}</div>
+            </div>
+          </a>`;
+        }).join('')}
+      </div>
+    </div>
+  `:'';
+
+  // Timeline (most recent first)
+  const tlHtml=(pt.timeline||[]).slice().reverse().map(t=>{
+    const ts=tipoS(t.tipo||'');
+    const srcs=(t.source_urls||[]).map((u,i)=>`<a class="tl-src" href="${u}" target="_blank" rel="noopener">fonte ${i+1}</a>`).join('');
+    return `<div class="tl-item">
+      <div class="tl-dot" style="background:${ts.bg}"></div>
+      <div class="tl-r">
+        <div class="tl-date">${t.date||''}</div>
+        <span class="tl-tipo" style="background:${ts.bg};color:${ts.c}">${t.tipo||''}</span>
+        <div class="tl-desc">${t.descrizione||''}</div>
+        ${t.esito?`<div class="tl-esito">${t.esito}</div>`:''}
+        ${srcs?`<div class="tl-srcs">${srcs}</div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+
+  // Sources
+  const srcHtml=(pt.main_source_urls||[]).map(u=>{
+    const d=u.replace(/^https?:\/\//,'').replace(/\/$/,'');
+    const short=d.length>60?d.substring(0,58)+'…':d;
+    return `<a class="src-link" href="${u}" target="_blank" rel="noopener">${short}</a>`;
+  }).join('');
+
+  // Estratti
+  const estrattiHtml=(pt.estratti_originali||[]).map(e=>{
+    const inner=e.replace(/^[«»\u201c\u201d\u2018\u2019"']+|[«»\u201c\u201d\u2018\u2019"']+$/g,'').trim();
+    return `<li class="estratto clickable" data-estratto="${inner.replace(/"/g,'&quot;')}">${e}</li>`;
+  }).join('');
+
+  const html=`
+    <div class="sb-body">
+      <div class="sb-area-row">
+        <span class="sb-area-dot" style="background:${areaColor}"></span>
+        <span class="sb-area-label">${pt.area}</span>
+      </div>
+      <div class="sb-title">${pt.titolo}</div>
+      <span class="sb-status-badge ${statusBadgeClass(pt.stato)}">${svgIconSm(pt.stato)} ${statusLabel(pt.stato)}</span>
+
+      ${isYou?`<div class="you-note">${YOU_NOTES[pt.point_id]}</div>`:''}
+
+      <div class="sb-two-col">
+        <div class="sb-sec">
+          <div class="sb-sec-lbl">Sintesi</div>
+          <div class="sb-sintesi">${pt.sintesi_addensata||''}</div>
+        </div>
+        ${estrattiHtml?`<div class="sb-sec">
+          <div class="sb-sec-lbl-row">
+            <span class="sb-sec-lbl">Testo originale</span>
+            <span class="sb-testo-icon" title="Clicca su una citazione per vedere il documento completo">📜</span>
+          </div>
+          <ul class="estratti">${estrattiHtml}</ul>
+        </div>`:'<div class="sb-sec"></div>'}
+      </div>
+      <div class="sb-sec">
+        <div class="sb-sec-lbl">Valutazione</div>
+        <div class="sb-motiv">${pt.motivazione_stato||''}</div>
+      </div>
+      ${peopleStripHtml}
+      ${tlHtml?`<div class="sb-sec">
+        <div class="sb-sec-lbl">Cronistoria</div>
+        <div class="timeline">${tlHtml}</div>
+      </div>`:''}
+      ${srcHtml?`<div class="sb-sec">
+        <div class="sb-sec-lbl">Fonti</div>
+        <div class="sources">${srcHtml}</div>
+      </div>`:''}
+    </div>
+  `;
+
+  document.getElementById(sbScrollId).innerHTML=html;
+
+  // Wire estratti clicks
+  document.querySelectorAll(`#${sbScrollId} .estratto.clickable`).forEach(el=>{
+    el.addEventListener('click',()=>openTextModal(el.dataset.estratto));
+  });
+
+  // Load Wikipedia images async
+  if(pt.people&&pt.people.length){
+    loadWikiImages(pt.people,`people-row-${pt.point_id}`);
+  }
+}
+
+// ── SORT CONTROL ──────────────────────────────────────────────────────────────
+function setSort(btn){
+  document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  currentSort=btn.dataset.sort;
+  renderList();
+  if(selectedId) requestAnimationFrame(()=>{
+    const el=document.querySelector(`[data-id="${selectedId}"]`);
+    if(el) el.classList.add('sel');
+  });
+}
+
+// ── LEGEND ────────────────────────────────────────────────────────────────────
+function openLegend(){
+  document.getElementById('leg-overlay').classList.add('open');
+}
+function closeLegend(){
+  document.getElementById('leg-overlay').classList.remove('open');
+}
+
+function buildLegend(){
+  // Status
+  document.getElementById('leg-status-list').innerHTML=[
+    ['in corso','In corso — referendum in corso'],
+    ['realizzato','Realizzato'],
+    ['parzialmente realizzato','Parzialmente realizzato'],
+    ['tentato','Tentato (non realizzato)'],
+    ['non ancora proposto','Non ancora proposto'],
+  ].map(([s,l])=>`<div class="leg-s-item">${svgIcon(s,24)}<span class="leg-s-lbl">${l}</span></div>`).join('');
+
+  // Areas
+  const seen=new Set();
+  const grid=document.getElementById('leg-area-grid');
+  allPoints.forEach(p=>{
+    if(!seen.has(p.area)){
+      seen.add(p.area);
+      const d=document.createElement('div');
+      d.className='leg-a-item';
+      d.innerHTML=`<span class="leg-a-dot" style="background:${AREA_COLOR[p.area]||'#AAA'}"></span>${p.area}`;
+      grid.appendChild(d);
+    }
+  });
+}
+
+// ── LEFT PANEL ────────────────────────────────────────────────────────────────
+function buildLeftPanel(){
+  const counts={
+    'non ancora proposto': allPoints.filter(p=>p.stato==='non ancora proposto').length,
+    'tentato':             allPoints.filter(p=>p.stato==='tentato').length,
+    'in corso':            allPoints.filter(p=>p.stato==='in corso').length,
+    'parzialmente realizzato': allPoints.filter(p=>p.stato==='parzialmente realizzato').length,
+    'realizzato':          allPoints.filter(p=>p.stato==='realizzato').length,
+  };
+  const statRows=[
+    ['non ancora proposto','Mai proposto'],
+    ['tentato','Tentativo fallito'],
+    ['in corso','In corso'],
+    ['parzialmente realizzato','Realizzato in parte'],
+    ['realizzato','Realizzato completamente'],
+  ];
+
+  const statsHtml=statRows.map(([s,lbl],idx)=>{
+    const n=counts[s]||0;
+    const row=`<div class="lp-stat-item">
+      ${svgIcon(s,18)}
+      <span class="lp-stat-label">${lbl}</span>
+      <span class="lp-stat-count${n===0?' zero':''}">${n}</span>
+    </div>`;
+    const note=idx===0?`<div class="lp-stat-note">(TUTTI i punti sono stati tentati almeno una volta, molti sono stati realizzati)</div>`:'';
+    return row+note;
+  }).join('');
+
+  // Areas (deduplicated, sorted)
+  const seenAreas=[];
+  allPoints.forEach(p=>{if(!seenAreas.includes(p.area))seenAreas.push(p.area)});
+  const areasHtml=seenAreas.sort().map(a=>{
+    const active=activeAreaFilter===a;
+    const dimmed=activeAreaFilter&&!active;
+    return `<div class="lp-area-item${active?' active':''}${dimmed?' dimmed':''}" data-area="${a}" onclick="toggleAreaFilter('${a}')">
+      <span class="lp-area-dot" style="background:${AREA_COLOR[a]||'#AAA'}"></span>
+      <span class="lp-area-label">${a}</span>
+    </div>`;
+  }).join('');
+
+  document.getElementById('left-panel').innerHTML=`
+    <div class="lp-sec">
+      <div class="lp-sec-title">Stato</div>
+      <div class="lp-stat-list">${statsHtml}</div>
+    </div>
+    <div class="lp-sec">
+      <div class="lp-sec-title">Aree${activeAreaFilter?` <span style="font-size:.55rem;color:var(--amber);cursor:pointer;font-weight:400;text-transform:none;letter-spacing:0" onclick="clearAreaFilter()">✕ tutte</span>`:''}</div>
+      <div class="lp-area-list">${areasHtml}</div>
+    </div>
+  `;
+}
+
+function toggleAreaFilter(area){
+  activeAreaFilter=activeAreaFilter===area?null:area;
+  buildLeftPanel();
+  renderList();
+}
+function clearAreaFilter(){
+  activeAreaFilter=null;
+  buildLeftPanel();
+  renderList();
+}
+
+// ── PROGRESS ──────────────────────────────────────────────────────────────────
+function computeProgress(){
+  const total=allPoints.length;
+  if(!total) return;
+  const real=allPoints.filter(p=>p.stato==='realizzato').length;
+  const parz=allPoints.filter(p=>p.stato==='parzialmente realizzato').length;
+  const corso=allPoints.filter(p=>p.stato==='in corso').length;
+  const tent=allPoints.filter(p=>p.stato==='tentato').length;
+  // remaining (non ancora proposto) fills to 100% via flex background
+  const pReal=(real/total*100).toFixed(1);
+  const pParz=(parz/total*100).toFixed(1);
+  const pCorso=(corso/total*100).toFixed(1);
+  const pTent=(tent/total*100).toFixed(1);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.getElementById('prog-real').style.width=pReal+'%';
+    document.getElementById('prog-parz').style.width=pParz+'%';
+    document.getElementById('prog-corso').style.width=pCorso+'%';
+    document.getElementById('prog-tent').style.width=pTent+'%';
+  }));
+}
+
+// ── TEXT MODAL / FUZZY MATCH ──────────────────────────────────────────────────
+let pianoHtml=null;      // raw HTML string
+let pianoTextContent=null; // extracted text for fuzzy matching
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+function normalizeForMatch(s){
+  return s.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9 ]/g,' ')
+    .replace(/\s+/g,' ').trim();
+}
+
+// Build parallel normalized text with char-map back to original positions
+function buildNormMap(text){
+  let norm='';
+  const normToOrig=[];
+  let prevSpace=true;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    const nc=c.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    if(/[a-z0-9]/.test(nc)){
+      norm+=nc; normToOrig.push(i); prevSpace=false;
+    } else if(!prevSpace){
+      norm+=' '; normToOrig.push(i); prevSpace=true;
+    }
+  }
+  return {norm,normToOrig};
+}
+
+function findBestMatch(query,fullText){
+  const clean=query.replace(/[«»\u201c\u201d\u2018\u2019"']/g,'').trim();
+  const normQ=normalizeForMatch(clean);
+  const qWords=normQ.split(' ').filter(w=>w.length>1);
+  if(!qWords.length) return null;
+
+  const {norm:normFull,normToOrig}=buildNormMap(fullText);
+
+  // Tokenize normalized full text, tracking position
+  const tokens=[];
+  const re=/\S+/g; let m;
+  while((m=re.exec(normFull))!==null) tokens.push({t:m[0],p:m.index});
+
+  const qSet=new Set(qWords);
+  const W=qWords.length;
+  let bestScore=-1,bestNS=0,bestNE=normFull.length;
+
+  for(let winW=Math.max(1,W-1);winW<=W+4;winW++){
+    for(let i=0;i<=tokens.length-winW;i++){
+      const slice=tokens.slice(i,i+winW);
+      const wSet=new Set(slice.map(t=>t.t).filter(w=>w.length>1));
+      let inter=0; for(const w of qSet) if(wSet.has(w)) inter++;
+      const union=qSet.size+wSet.size-inter;
+      const score=union?inter/union:0;
+      if(score>bestScore){
+        bestScore=score;
+        bestNS=slice[0].p;
+        bestNE=slice[winW-1].p+slice[winW-1].t.length;
+      }
+    }
+  }
+
+  if(bestScore<0.3) return null;
+
+  // Map normalized positions → original positions
+  let oS=normToOrig[bestNS]??0;
+  let oE=normToOrig[Math.min(bestNE,normToOrig.length-1)]??fullText.length;
+  // Expand to word boundaries
+  while(oS>0 && !/\s/.test(fullText[oS-1])) oS--;
+  while(oE<fullText.length && !/[\s,;.]/.test(fullText[oE])) oE++;
+  return {score:bestScore,oS,oE};
+}
+
+// Insert <mark> into the DOM by walking text nodes and tracking char positions
+function highlightInDom(container, matchStart, matchEnd){
+  const walker=document.createTreeWalker(container,NodeFilter.SHOW_TEXT);
+  let pos=0;
+  const hits=[];
+  let node;
+  while((node=walker.nextNode())){
+    const len=node.textContent.length;
+    const ns=pos, ne=pos+len;
+    if(ne>matchStart&&ns<matchEnd) hits.push({node,ns,ne});
+    pos=ne;
+  }
+  // process in reverse to preserve sibling positions
+  for(let i=hits.length-1;i>=0;i--){
+    const {node,ns,ne}=hits[i];
+    const ls=Math.max(0,matchStart-ns);
+    const le=Math.min(ne-ns,matchEnd-ns);
+    const txt=node.textContent;
+    const mark=document.createElement('mark');
+    mark.textContent=txt.slice(ls,le);
+    const frag=document.createDocumentFragment();
+    if(ls>0) frag.appendChild(document.createTextNode(txt.slice(0,ls)));
+    frag.appendChild(mark);
+    if(le<txt.length) frag.appendChild(document.createTextNode(txt.slice(le)));
+    node.parentNode.replaceChild(frag,node);
+  }
+}
+
+async function openTextModal(estratto){
+  if(!pianoHtml){
+    try{
+      const r=await fetch('./piano.html');
+      pianoHtml=await r.text();
+      // extract plain text for fuzzy matching
+      const tmp=document.createElement('div');
+      tmp.innerHTML=pianoHtml;
+      pianoTextContent=tmp.textContent;
+    }catch(e){ pianoHtml=''; pianoTextContent=''; }
+  }
+  const modal=document.getElementById('text-modal');
+  const body=document.getElementById('text-modal-body');
+  const hint=document.getElementById('text-modal-hint');
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+
+  if(!pianoHtml){ body.innerHTML='<em style="padding:2rem;display:block;color:var(--faint)">Testo non disponibile.</em>'; return; }
+
+  // render HTML
+  body.innerHTML=pianoHtml;
+
+  if(!estratto){ hint.textContent=''; return; }
+
+  const res=findBestMatch(estratto,pianoTextContent);
+  if(!res){
+    hint.textContent='Corrispondenza non trovata — mostrato il testo integrale.';
+    return;
+  }
+
+  highlightInDom(body,res.oS,res.oE);
+  hint.textContent=`Corrispondenza: ${Math.round(res.score*100)}% · Clicca fuori o premi Esc per chiudere`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const mark=body.querySelector('mark');
+    if(mark) mark.scrollIntoView({behavior:'smooth',block:'center'});
+  }));
+}
+
+function closeTextModal(){
+  document.getElementById('text-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeTextModal();});
+
+// ── BOOT ──────────────────────────────────────────────────────────────────────
+// ── PARLIAMENT ────────────────────────────────────────────────────────────────
+const PARTY_COLOR={
+  'P2':'#7B4018','DC':'#4DA0D0','PRI':'#C83040','PSI':'#CC2020',
+  'Forza Italia':'#0060C8','PD':'#7B3A20','Radicali':'#9B30CC',
+  'FdI':'#002F7A','area PD':'#A84030','Azione':'#0092CC',
+  'M5S':'#E8B800','Italia Viva':'#D8009A','indipendente':'#6888A0',
+  'centro (Scelta Civica)':'#80B8D8','area centro-destra':'#4A6FBC',
+  'n.d.':'#706050','PLI':'#1848A0','PdL':'#004898',
+};
+const PARL_ROWS=[{r:88,n:13},{r:126,n:19},{r:164,n:24},{r:202,n:30},{r:240,n:35},{r:278,n:40}];
+const PARL_CX=430,PARL_CY=305,PARL_SEAT_R=7.5;
+const ANG_MIN=14,ANG_MAX=166; // degrees, left=MAX right=MIN
+
+function parlPos(r,t){ // t 0=left 1=right
+  const a=(ANG_MAX-t*(ANG_MAX-ANG_MIN))*Math.PI/180;
+  return {x:PARL_CX+r*Math.cos(a),y:PARL_CY-r*Math.sin(a)};
+}
+function buildParlSeats(){
+  const seats=[];
+  PARL_ROWS.forEach(({r,n})=>{
+    for(let i=0;i<n;i++){
+      const t=n===1?.5:i/(n-1);
+      const {x,y}=parlPos(r,t);
+      seats.push({x,y,t,person:null,id:seats.length});
+    }
+  });
+  return seats;
+}
+function assignParlPeople(seats,people){
+  seats.sort((a,b)=>a.t-b.t);
+  const T=seats.length;
+  const withS=[...people].filter(p=>p.spettro_politico!==null)
+    .sort((a,b)=>a.spettro_politico-b.spettro_politico);
+  const noS=people.filter(p=>p.spettro_politico===null);
+  const used=new Array(T).fill(false);
+  for(const p of withS){
+    const target=Math.round((p.spettro_politico/100)*(T-1));
+    let best=-1,bestD=Infinity;
+    for(let d=0;d<T;d++){
+      for(const idx of[target-d,target+d]){
+        if(idx>=0&&idx<T&&!used[idx]){const dist=Math.abs(idx-target);if(dist<bestD){bestD=dist;best=idx;}}
+      }
+      if(best!==-1)break;
+    }
+    if(best!==-1){seats[best].person=p;used[best]=true;}
+  }
+  const midFree=[...Array(T).keys()].filter(i=>!used[i]).sort((a,b)=>Math.abs(a-T/2)-Math.abs(b-T/2));
+  noS.forEach((p,i)=>{if(midFree[i]!==undefined){seats[midFree[i]].person=p;used[midFree[i]]=true;}});
+}
+function hexParts(hex){const n=parseInt(hex.replace('#',''),16);return[(n>>16)&0xFF,(n>>8)&0xFF,n&0xFF];}
+function lightenHex(hex,amt){return'#'+hexParts(hex).map(v=>Math.min(255,v+amt).toString(16).padStart(2,'0')).join('');}
+function isHexDark(hex){const[r,g,b]=hexParts(hex);return(r*299+g*587+b*114)/1000<140;}
+function parlIni(nome){const p=nome.trim().split(/\s+/);return p.length===1?p[0][0].toUpperCase():(p[0][0]+p[p.length-1][0]).toUpperCase();}
+
+let parlSeats=[],parlBuilt=false;
+
+function openParl(){
+  document.getElementById('parl-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  if(!parlBuilt){renderParliament();parlBuilt=true;}
+}
+function closeParl(){
+  document.getElementById('parl-modal').classList.remove('open');
+  document.body.style.overflow='';
+  hideParlTt();
+}
+
+function showParlTt(seat,evt){
+  const p=seat.person;
+  const color=PARTY_COLOR[p.partito]||'#808080';
+  const ini=parlIni(p.nome);
+  const imgUrl=p.immagine_riferimento_url||'';
+  const isDir=/\.(jpe?g|png|webp|gif)(\?|$)/i.test(imgUrl);
+  const wTitle=!isDir&&imgUrl.includes('wikipedia.org/wiki/')?
+    decodeURIComponent((imgUrl.match(/wiki\/([^?#]+)/)||[])[1]||'').replace(/ /g,'_'):'';
+  const cached=wTitle&&wikiCache[wTitle];
+  const imgHtml=isDir?`<img src="${imgUrl}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`
+    :cached?`<img src="${cached}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`
+    :`<span>${ini}</span>`;
+  const badgeTxt=isHexDark(color)?'#F0DFC0':'#1A1000';
+  const spec=p.spettro_politico;
+  document.getElementById('parl-tt').innerHTML=`
+    <div class="parl-tt-top">
+      <div class="parl-tt-avatar">${imgHtml}</div>
+      <div class="parl-tt-name">${p.nome}</div>
+    </div>
+    <div class="parl-tt-badge" style="background:${color}28;border:1px solid ${color}55;color:${color}">${p.partito||'—'}</div>
+    ${spec!==null?`<div class="parl-tt-spec-label">Spettro politico</div>
+    <div class="parl-tt-bar"><div class="parl-tt-bar-fill" style="width:${spec}%;background:${color}"></div></div>
+    <div class="parl-tt-pct"><span style="color:#3A2A18">Sin.</span><span style="color:${lightenHex(color,60)}">${spec}%</span><span style="color:#3A2A18">Des.</span></div>`:''}
+    ${p.titolo?`<div class="parl-tt-role">${p.titolo}</div>`:''}`;
+  const tt=document.getElementById('parl-tt');
+  tt.style.left=Math.min(evt.clientX+16,window.innerWidth-260)+'px';
+  tt.style.top=Math.min(evt.clientY-12,window.innerHeight-220)+'px';
+  tt.classList.add('vis');
+  if(wTitle&&!cached&&!isDir) loadParlTtImg(wTitle,ini);
+}
+function hideParlTt(){document.getElementById('parl-tt').classList.remove('vis');}
+async function loadParlTtImg(title,ini){
+  if(wikiCache[title]){
+    const av=document.querySelector('#parl-tt .parl-tt-avatar');
+    if(av)av.innerHTML=`<img src="${wikiCache[title]}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`;
+    return;
+  }
+  try{
+    const url=`https://it.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}&prop=pageimages&pithumbsize=80&format=json&origin=*`;
+    const resp=await fetch(url,{signal:AbortSignal.timeout(4000)});
+    const data=await resp.json();
+    for(const pid in data.query?.pages||{}){
+      const src=data.query.pages[pid].thumbnail?.source;
+      if(src){wikiCache[title]=src;const av=document.querySelector('#parl-tt .parl-tt-avatar');if(av)av.innerHTML=`<img src="${src}" alt="${ini}" onerror="this.parentElement.textContent='${ini}'">`;}
+    }
+  }catch(e){}
+}
+
+function renderParliament(){
+  if(!allPeople.length) return;
+  parlSeats=buildParlSeats();
+  assignParlPeople(parlSeats,allPeople);
+  const seatMap={};
+  parlSeats.forEach(s=>seatMap[s.id]=s);
+
+  const CX=PARL_CX,CY=PARL_CY;
+  const a1=ANG_MAX*Math.PI/180, a2=ANG_MIN*Math.PI/180;
+  let html=`<defs>
+    <radialGradient id="pg1" cx="50%" cy="90%" r="75%">
+      <stop offset="0%" stop-color="#EAE4D4"/><stop offset="60%" stop-color="#D8D0BC"/><stop offset="100%" stop-color="#C8C0A8"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+  </defs>`;
+
+  // Floor wedge
+  const rx=PARL_ROWS[PARL_ROWS.length-1].r+22;
+  const fx1=(CX+rx*Math.cos(a1)).toFixed(1), fy1=(CY-rx*Math.sin(a1)).toFixed(1);
+  const fx2=(CX+rx*Math.cos(a2)).toFixed(1), fy2=(CY-rx*Math.sin(a2)).toFixed(1);
+  html+=`<path d="M${fx1},${fy1} A${rx},${rx} 0 0,1 ${fx2},${fy2} L${CX},${CY} Z" fill="url(#pg1)"/>`;
+
+  // Concentric guide arcs
+  PARL_ROWS.forEach(({r},i)=>{
+    const x1=(CX+r*Math.cos(a1)).toFixed(1),y1=(CY-r*Math.sin(a1)).toFixed(1);
+    const x2=(CX+r*Math.cos(a2)).toFixed(1),y2=(CY-r*Math.sin(a2)).toFixed(1);
+    html+=`<path d="M${x1},${y1} A${r},${r} 0 0,1 ${x2},${y2}" fill="none" stroke="#B8B098" stroke-width=".8" opacity=".55"/>`;
+  });
+
+  // Podium
+  html+=`<ellipse cx="${CX}" cy="${CY}" rx="26" ry="11" fill="#C8C0A8" stroke="#A8A088" stroke-width="1.2"/>
+  <ellipse cx="${CX}" cy="${CY}" rx="14" ry="6" fill="#D8D0B8" stroke="#B8B098" stroke-width="1"/>`;
+
+  // Seats
+  parlSeats.forEach(seat=>{
+    const {x,y,person,id}=seat;
+    const xf=x.toFixed(1),yf=y.toFixed(1);
+    if(person){
+      const col=PARTY_COLOR[person.partito]||'#808080';
+      const light=lightenHex(col,50);
+      html+=`<circle cx="${xf}" cy="${yf}" r="${PARL_SEAT_R+3}" fill="${col}" opacity=".18"/>
+      <circle class="pseat" data-id="${id}" cx="${xf}" cy="${yf}" r="${PARL_SEAT_R}" fill="${col}" stroke="${light}" stroke-width="1.2" style="cursor:pointer"/>`;
+    } else {
+      html+=`<circle cx="${xf}" cy="${yf}" r="${PARL_SEAT_R}" fill="#D0C8B4" stroke="#B8B098" stroke-width=".8" opacity=".7"/>`;
+    }
+  });
+
+  const svg=document.getElementById('parl-svg');
+  svg.innerHTML=html;
+
+  svg.querySelectorAll('.pseat').forEach(el=>{
+    const seat=seatMap[parseInt(el.dataset.id)];
+    if(!seat) return;
+    el.addEventListener('mouseenter',e=>{el.setAttribute('r',PARL_SEAT_R+2.5);showParlTt(seat,e);});
+    el.addEventListener('mousemove',e=>{
+      const tt=document.getElementById('parl-tt');
+      tt.style.left=Math.min(e.clientX+16,window.innerWidth-260)+'px';
+      tt.style.top=Math.min(e.clientY-12,window.innerHeight-220)+'px';
+    });
+    el.addEventListener('mouseleave',()=>{el.setAttribute('r',PARL_SEAT_R);hideParlTt();});
+  });
+
+  // Legend — sorted by spectrum (left to right), only parties present
+  const partySpectrum={};
+  allPeople.forEach(p=>{if(p.partito&&p.spettro_politico!==null){if(!partySpectrum[p.partito])partySpectrum[p.partito]=[];partySpectrum[p.partito].push(p.spettro_politico);}});
+  const parties=[...new Set(allPeople.map(p=>p.partito).filter(Boolean))]
+    .sort((a,b)=>{const ma=(partySpectrum[a]||[50]).reduce((s,v)=>s+v,0)/(partySpectrum[a]||[50]).length;const mb=(partySpectrum[b]||[50]).reduce((s,v)=>s+v,0)/(partySpectrum[b]||[50]).length;return ma-mb;});
+  document.getElementById('parl-legend').innerHTML=parties.map(party=>{
+    const col=PARTY_COLOR[party]||'#808080';
+    return `<div class="parl-leg-item"><div class="parl-leg-dot" style="background:${col}"></div><span>${party}</span></div>`;
+  }).join('');
+
+  computeParlMeter();
+}
+
+function computeParlMeter(){
+  const vals=allPeople.filter(p=>p.spettro_politico!==null).map(p=>p.spettro_politico);
+  if(!vals.length) return;
+  const leftSum=vals.filter(v=>v<50).reduce((a,b)=>a+b,0);
+  const rightSum=vals.filter(v=>v>50).reduce((a,b)=>a+b,0);
+  // Needle position: share of right vs total
+  const needlePct=rightSum/(leftSum+rightSum)*100;
+  // How much % more is right vs left
+  const diffPct=leftSum>0?((rightSum-leftSum)/leftSum*100):100;
+  const absD=Math.abs(diffPct).toFixed(0);
+  const label=diffPct>2?`La destra pesa il ${absD}% in più della sinistra`
+    :diffPct<-2?`La sinistra pesa il ${absD}% in più della destra`
+    :`Bilanciato`;
+  document.getElementById('parl-gravity').textContent=label;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    document.getElementById('parl-needle').style.left=needlePct.toFixed(1)+'%';
+  }));
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeParl();closeAbout();}});
+function openAbout(){document.getElementById('about-modal').classList.add('open');document.body.style.overflow='hidden';}
+function closeAbout(){document.getElementById('about-modal').classList.remove('open');document.body.style.overflow='';}
+
+fetch('./piano_rinascita_democratica_dataset.json')
+  .then(r=>{if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+  .then(data=>{
+    allPoints=data.points||[];
+    allPeople=data.people_index||[];
+    document.getElementById('snap-date').textContent='Snapshot '+( data.snapshot_date||'');
+    renderList();
+    computeProgress();
+    buildLegend();
+    buildLeftPanel();
+  })
+  .catch(err=>{
+    document.getElementById('checklist').innerHTML=`<li style="padding:2.5rem 0;color:#B86;font-size:.85rem;font-weight:300;list-style:none">
+      Aprire tramite server locale (es. Live Server in VS Code).<br><small style="opacity:.6">${err}</small>
+    </li>`;
+  });
+</script>
+</body>
+</html>

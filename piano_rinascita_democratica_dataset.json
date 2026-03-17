@@ -1,0 +1,2056 @@
+{
+  "snapshot_date": "2026-03-17",
+  "methodology": [
+    "Dataset costruito a partire dal testo del Piano di rinascita democratica e da fonti normative/parlamentari ufficiali.",
+    "Ogni punto è “addensato”: diversi micro-passaggi del testo originario sono stati fusi in un singolo punto analitico quando trattavano la stessa direttrice di riforma.",
+    "Lo stato assegnato è una valutazione storica-analitica e non una certificazione giuridica.",
+    "Checklist degli stati: realizzato; parzialmente realizzato; tentato; non ancora proposto.",
+    "Snapshot cronologico del dataset: 17 marzo 2026.",
+    "Nel campo immagine_riferimento_url delle persone, quando non era immediatamente disponibile un file immagine stabile, è stata indicata una pagina profilo o enciclopedica contenente una fotografia."
+  ],
+  "status_scale": [
+    "in corso",
+    "realizzato",
+    "parzialmente realizzato",
+    "tentato",
+    "non ancora proposto"
+  ],
+  "people_index": [
+    {
+      "person_id": "P01",
+      "nome": "Licio Gelli",
+      "titolo": "capo della loggia P2; autore del piano",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Licio_Gelli",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Licio_Gelli",
+      "note": "Figura originaria del progetto; collegato ai punti come autore del disegno politico.",
+      "partito": "P2",
+      "spettro_politico": 100
+    },
+    {
+      "person_id": "P02",
+      "nome": "Tina Anselmi",
+      "titolo": "presidente della Commissione parlamentare d’inchiesta sulla P2",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Tina_Anselmi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Tina_Anselmi",
+      "note": "Usata soprattutto come figura di ricostruzione e contestualizzazione del piano.",
+      "partito": "DC",
+      "spettro_politico": 60
+    },
+    {
+      "person_id": "P03",
+      "nome": "Oscar Mammì",
+      "titolo": "ministro delle poste e telecomunicazioni; legge 223/1990",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Oscar_Mamm%C3%AC",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Oscar_Mamm%C3%AC",
+      "note": "Associato alla liberalizzazione radiotelevisiva.",
+      "partito": "PRI",
+      "spettro_politico": 52
+    },
+    {
+      "person_id": "P04",
+      "nome": "Bettino Craxi",
+      "titolo": "presidente del Consiglio (1983-1987)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Bettino_Craxi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Bettino_Craxi",
+      "note": "Collegato alla fase di espansione delle reti private precedenti alla legge Mammì.",
+      "partito": "PSI",
+      "spettro_politico": 38
+    },
+    {
+      "person_id": "P05",
+      "nome": "Silvio Berlusconi",
+      "titolo": "imprenditore televisivo; poi presidente del Consiglio",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
+      "note": "Figura centrale nel consolidamento dell’emittenza privata nazionale.",
+      "partito": "Forza Italia",
+      "spettro_politico": 68
+    },
+    {
+      "person_id": "P06",
+      "nome": "Paolo Gentiloni",
+      "titolo": "presidente del Consiglio (2016-2018)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Paolo_Gentiloni",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Paolo_Gentiloni",
+      "note": "Governo titolare del d.lgs. 70/2017 sui contributi diretti all’editoria.",
+      "partito": "PD",
+      "spettro_politico": 48
+    },
+    {
+      "person_id": "P07",
+      "nome": "Gino Giugni",
+      "titolo": "giuslavorista; ministro del lavoro",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Gino_Giugni",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Gino_Giugni",
+      "note": "Associato alla costruzione della disciplina dello sciopero nei servizi essenziali.",
+      "partito": "PSI",
+      "spettro_politico": 38
+    },
+    {
+      "person_id": "P08",
+      "nome": "Marco Pannella",
+      "titolo": "leader radicale; promotore referendario",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Marco_Pannella",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Marco_Pannella",
+      "note": "Collegato al referendum del 1987 sulla responsabilità civile dei magistrati.",
+      "partito": "Radicali",
+      "spettro_politico": 55
+    },
+    {
+      "person_id": "P09",
+      "nome": "Giuliano Vassalli",
+      "titolo": "ministro della giustizia; legge n. 117/1988",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Giuliano_Vassalli",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Giuliano_Vassalli",
+      "note": "Associato alla legge del 1988 sulla responsabilità civile dei magistrati.",
+      "partito": "PSI",
+      "spettro_politico": 38
+    },
+    {
+      "person_id": "P10",
+      "nome": "Carlo Nordio",
+      "titolo": "ministro della giustizia",
+      "immagine_riferimento_url": "https://www.giustizia.it/cmsresources/cms/images/Nordio_280x260_1_4_d4.jpg",
+      "link_url": "https://it.wikipedia.org/wiki/Carlo_Nordio",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Carlo_Nordio",
+      "note": "Collegato alla riforma costituzionale sulla separazione delle carriere.",
+      "partito": "FdI",
+      "spettro_politico": 82
+    },
+    {
+      "person_id": "P11",
+      "nome": "Giorgia Meloni",
+      "titolo": "Presidente del Consiglio dei ministri",
+      "immagine_riferimento_url": "https://www.governo.it/sites/governo.it/files/styles/650x350/public/Presidente_Meloni_Biog.jpg?itok=JXUxSQvy",
+      "link_url": "https://it.wikipedia.org/wiki/Giorgia_Meloni",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Giorgia_Meloni",
+      "note": "Collegata ai progetti di premierato e alla riforma della giustizia della XIX legislatura.",
+      "partito": "FdI",
+      "spettro_politico": 82
+    },
+    {
+      "person_id": "P12",
+      "nome": "Maria Elisabetta Alberti Casellati",
+      "titolo": "Ministra per le Riforme istituzionali e la Semplificazione normativa",
+      "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elisabetta_Alberti_Casellati_cropped.jpg",
+      "link_url": "https://it.wikipedia.org/wiki/Maria_Elisabetta_Alberti_Casellati",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Maria_Elisabetta_Alberti_Casellati",
+      "note": "Collegata ai progetti di riforma istituzionale del Governo Meloni.",
+      "partito": "Forza Italia",
+      "spettro_politico": 68
+    },
+    {
+      "person_id": "P13",
+      "nome": "Franco Bassanini",
+      "titolo": "ministro per la funzione pubblica e gli affari regionali",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Franco_Bassanini",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Franco_Bassanini",
+      "note": "Figura chiave della stagione di riforma amministrativa e del riordino ministeriale.",
+      "partito": "area PD",
+      "spettro_politico": 46
+    },
+    {
+      "person_id": "P14",
+      "nome": "Sergio Mattarella",
+      "titolo": "Presidente della Repubblica; già proponente del Mattarellum",
+      "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+      "link_url": "https://it.wikipedia.org/wiki/Sergio_Mattarella",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Sergio_Mattarella",
+      "note": "Collegato sia alle riforme elettorali del 1993 sia alle norme sul Presidente della Repubblica.",
+      "partito": "DC",
+      "spettro_politico": 60
+    },
+    {
+      "person_id": "P15",
+      "nome": "Ettore Rosato",
+      "titolo": "deputato; proponente del Rosatellum",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Ettore_Rosato",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Ettore_Rosato",
+      "note": "Associato alla legge elettorale del 2017.",
+      "partito": "Azione",
+      "spettro_politico": 65
+    },
+    {
+      "person_id": "P16",
+      "nome": "Luigi Di Maio",
+      "titolo": "leader del M5S; sostenitore della riduzione dei parlamentari",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Luigi_Di_Maio",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Luigi_Di_Maio",
+      "note": "Figura politica simbolo della riforma sul taglio dei parlamentari.",
+      "partito": "M5S",
+      "spettro_politico": 40
+    },
+    {
+      "person_id": "P17",
+      "nome": "Giuseppe Conte",
+      "titolo": "presidente del Consiglio (2018-2021)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Giuseppe_Conte",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Giuseppe_Conte",
+      "note": "Presidente del Consiglio nella fase conclusiva del taglio dei parlamentari.",
+      "partito": "M5S",
+      "spettro_politico": 40
+    },
+    {
+      "person_id": "P18",
+      "nome": "Matteo Renzi",
+      "titolo": "presidente del Consiglio (2014-2016)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Matteo_Renzi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Matteo_Renzi",
+      "note": "Associato alla riforma costituzionale del 2016 e ad altre riorganizzazioni istituzionali.",
+      "partito": "Italia Viva",
+      "spettro_politico": 65
+    },
+    {
+      "person_id": "P19",
+      "nome": "Maria Elena Boschi",
+      "titolo": "ministra per le riforme costituzionali e i rapporti con il Parlamento (2014-2016)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Maria_Elena_Boschi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Maria_Elena_Boschi",
+      "note": "Volto politico della riforma costituzionale sottoposta a referendum nel 2016.",
+      "partito": "Italia Viva",
+      "spettro_politico": 65
+    },
+    {
+      "person_id": "P20",
+      "nome": "Graziano Delrio",
+      "titolo": "ministro per gli affari regionali; legge 56/2014",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Graziano_Delrio",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Graziano_Delrio",
+      "note": "Associato alla legge Delrio sul riordino delle province.",
+      "partito": "PD",
+      "spettro_politico": 48
+    },
+    {
+      "person_id": "P21",
+      "nome": "Roberto Morassut",
+      "titolo": "deputato; proponente della riduzione del numero delle regioni",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Roberto_Morassut",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Roberto_Morassut",
+      "note": "Associato alla proposta di revisione costituzionale A.C. 277.",
+      "partito": "PD",
+      "spettro_politico": 48
+    },
+    {
+      "person_id": "P22",
+      "nome": "Elsa Fornero",
+      "titolo": "ministra del lavoro e delle politiche sociali (2011-2013)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Elsa_Fornero",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Elsa_Fornero",
+      "note": "Associata alla riforma pensionistica del 2011-2012.",
+      "partito": "indipendente",
+      "spettro_politico": 58
+    },
+    {
+      "person_id": "P23",
+      "nome": "Mario Monti",
+      "titolo": "presidente del Consiglio (2011-2013)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Mario_Monti",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Mario_Monti",
+      "note": "Presidente del Consiglio nella stagione della riforma previdenziale e dell’incorporazione delle gestioni INPDAP/ENPALS.",
+      "partito": "centro (Scelta Civica)",
+      "spettro_politico": 60
+    },
+    {
+      "person_id": "P24",
+      "nome": "Luigi Sbarra",
+      "titolo": "già segretario generale CISL; promotore della partecipazione dei lavoratori",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Luigi_Sbarra",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Luigi_Sbarra",
+      "note": "Associato all’iniziativa sulla partecipazione dei lavoratori.",
+      "partito": "area centro-destra",
+      "spettro_politico": 62
+    },
+    {
+      "person_id": "P25",
+      "nome": "Francesco Saja",
+      "titolo": "primo presidente dell’AGCM",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Francesco_Saja",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Francesco_Saja",
+      "note": "Associato all’avvio dell’Autorità garante della concorrenza e del mercato.",
+      "partito": "n.d.",
+      "spettro_politico": null
+    },
+    {
+      "person_id": "P26",
+      "nome": "Carlo Azeglio Ciampi",
+      "titolo": "presidente del Consiglio; ministro del Tesoro",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Carlo_Azeglio_Ciampi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Carlo_Azeglio_Ciampi",
+      "note": "Associato alla stagione del Testo unico bancario.",
+      "partito": "indipendente",
+      "spettro_politico": 55
+    },
+    {
+      "person_id": "P27",
+      "nome": "Anna Maria Bernini",
+      "titolo": "ministra dell’Università e della ricerca",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Anna_Maria_Bernini",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Anna_Maria_Bernini",
+      "note": "Associata alle misure attuali di diritto allo studio universitario.",
+      "partito": "Forza Italia",
+      "spettro_politico": 68
+    },
+    {
+      "person_id": "P28",
+      "nome": "Francesco De Lorenzo",
+      "titolo": "ministro della sanità; riforma sanitaria del 1992",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Francesco_De_Lorenzo",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Francesco_De_Lorenzo",
+      "note": "Associato al D.Lgs. 502/1992.",
+      "partito": "PLI",
+      "spettro_politico": 70
+    },
+    {
+      "person_id": "P29",
+      "nome": "Rosy Bindi",
+      "titolo": "ministra della sanità; riforma del 1999",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Rosy_Bindi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Rosy_Bindi",
+      "note": "Associata al D.Lgs. 229/1999.",
+      "partito": "PD",
+      "spettro_politico": 48
+    },
+    {
+      "person_id": "P30",
+      "nome": "Guido Possa",
+      "titolo": "Viceministro dell'istruzione, dell'università e della ricerca",
+      "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Guido_Possa.jpg",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Guido_Possa",
+      "note": "Presente all'audizione del 01/02/2012 al Senato sulla proposta di abolizione del valore legale del titolo di studio.",
+      "partito": "PdL",
+      "spettro_politico": 75
+    }
+  ],
+  "points": [
+    {
+      "point_id": "PRD-01",
+      "area": "Media",
+      "titolo": "Liberalizzazione radiotelevisiva e fine del monopolio RAI",
+      "sintesi_addensata": "Il piano punta a spezzare il monopolio radiotelevisivo pubblico e ad aprire l’emittenza privata, soprattutto locale e via cavo, dentro una nuova cornice normativa di sistema.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Dal 1990 l’ordinamento disciplina espressamente un sistema radiotelevisivo pubblico e privato; il monopolio RAI è superato, anche se l’esito storico del mercato non coincide perfettamente con il disegno testuale originario.",
+      "estratti_originali": [
+        "«abolire il monopolio RAI-TV»",
+        "«dissolvere la RAI-TV in nome della libertà di antenna ex art. 21 Costit.»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P03",
+          "ruolo": "architetto della legge n. 223/1990 sul sistema radiotelevisivo pubblico e privato",
+          "nome": "Oscar Mammì",
+          "titolo_persona": "ministro delle poste e telecomunicazioni; legge 223/1990",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Oscar_Mamm%C3%AC"
+        },
+        {
+          "person_id": "P04",
+          "ruolo": "Presidente del Consiglio nella fase che precede il consolidamento normativo dell’emittenza privata nazionale",
+          "nome": "Bettino Craxi",
+          "titolo_persona": "presidente del Consiglio (1983-1987)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Bettino_Craxi"
+        },
+        {
+          "person_id": "P05",
+          "ruolo": "imprenditore televisivo protagonista dell’espansione delle reti private nazionali",
+          "nome": "Silvio Berlusconi",
+          "titolo_persona": "imprenditore televisivo; poi presidente del Consiglio",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Nel Piano compare la richiesta di abolire il monopolio RAI e aprire le TV via cavo locali.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1990-08-06",
+          "tipo": "legge",
+          "descrizione": "La legge n. 223 disciplina espressamente il sistema radiotelevisivo pubblico e privato.",
+          "esito": "realizzazione normativa del superamento del monopolio",
+          "source_keys": [
+            "radiotv_law_223_1990"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=090G0270&atto.dataPubblicazioneGazzetta=1990-08-09&tipoDettaglio=originario"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=090G0270&atto.dataPubblicazioneGazzetta=1990-08-09&tipoDettaglio=originario"
+      ]
+    },
+    {
+      "point_id": "PRD-02",
+      "area": "Media",
+      "titolo": "Trasparenza dell’editoria e abolizione dei sussidi alla stampa di partito",
+      "sintesi_addensata": "Il piano chiede bilanci annuali pubblici per le società editoriali, visibilità sulle retribuzioni e la fine delle provvidenze alla stampa di partito o politicamente collegata.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La disciplina dei contributi diretti è stata ridefinita e resa più selettiva, ma il sostegno pubblico all’editoria non è stato abolito e continua a essere gestito ordinariamente dalla Presidenza del Consiglio.",
+      "estratti_originali": [
+        "«obbligo di pubblicare ogni anno i bilanci nonchè le retribuzioni dei giornalisti»",
+        "«abolire tutte le provvidenze agevolative dirette a sanare bilanci deficitari con onere del pubblico erario»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P06",
+          "ruolo": "Presidente del Consiglio durante il d.lgs. n. 70/2017 di riordino dei contributi diretti",
+          "nome": "Paolo Gentiloni",
+          "titolo_persona": "presidente del Consiglio (2016-2018)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Paolo_Gentiloni"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano lega trasparenza economica dell’editoria e soppressione dei sussidi di stampa.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2017-05-15",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 70 ridefinisce la disciplina dei contributi diretti alle imprese editrici.",
+          "esito": "riordino selettivo, non abolizione",
+          "source_keys": [
+            "editoria_d_lgs_70_2017"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2017%3B070="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2017%3B070="
+      ]
+    },
+    {
+      "point_id": "PRD-03",
+      "area": "Lavoro",
+      "titolo": "Disciplina dello sciopero nei servizi pubblici essenziali",
+      "sintesi_addensata": "Il piano mira a stringere la disciplina dei sindacati e soprattutto a comprimere lo sciopero nelle aziende e nei servizi pubblici essenziali, trasferendo il conflitto collettivo in un quadro legale più rigido.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La legge n. 146/1990 e poi la legge n. 83/2000 hanno introdotto una disciplina specifica dello sciopero nei servizi pubblici essenziali con regole, limiti e Commissione di garanzia.",
+      "estratti_originali": [
+        "«regolando la vita dei sindacati limitando il diritto di sciopero»",
+        "«escludere i servizi pubblici essenziali (trasporti; dogane; ospedali e cliniche; imposte; pubbliche amministrazioni in genere) ovvero garantirne il corretto svolgimento»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P07",
+          "ruolo": "figura chiave della stagione che porta alla legge n. 146/1990 sullo sciopero nei servizi essenziali",
+          "nome": "Gino Giugni",
+          "titolo_persona": "giuslavorista; ministro del lavoro",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Gino_Giugni"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano collega il riassetto istituzionale alla compressione del conflitto sindacale nei servizi essenziali.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1990-06-12",
+          "tipo": "legge",
+          "descrizione": "La legge n. 146 disciplina l’esercizio del diritto di sciopero nei servizi pubblici essenziali.",
+          "esito": "realizzazione normativa del nucleo del punto",
+          "source_keys": [
+            "sciopero_law_146_1990"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990-06-12%3B146%21vig=2016-01-25"
+          ]
+        },
+        {
+          "date": "2000-04-11",
+          "tipo": "legge",
+          "descrizione": "La legge n. 83 integra e modifica la legge n. 146/1990.",
+          "esito": "rafforzamento della disciplina",
+          "source_keys": [
+            "sciopero_law_83_2000"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2000%3B83="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990-06-12%3B146%21vig=2016-01-25",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2000%3B83="
+      ]
+    },
+    {
+      "point_id": "PRD-04",
+      "area": "Giustizia",
+      "titolo": "Responsabilità civile dei magistrati",
+      "sintesi_addensata": "Il piano propone che il magistrato risponda civilmente per colpa nell’esercizio delle funzioni giudiziarie, superando le protezioni ritenute eccessive dell’assetto repubblicano.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il referendum del 1987 ha aperto la via alla legge n. 117/1988; il regime è stato poi rivisto nel 2015, segno che il punto è entrato stabilmente nell’ordinamento.",
+      "estratti_originali": [
+        "«la responsabilità civile (per colpa) dei magistrati»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P08",
+          "ruolo": "promotore del referendum del 1987 che precede la legge del 1988",
+          "nome": "Marco Pannella",
+          "titolo_persona": "leader radicale; promotore referendario",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Marco_Pannella"
+        },
+        {
+          "person_id": "P09",
+          "ruolo": "ministro della giustizia associato alla legge n. 117/1988",
+          "nome": "Giuliano Vassalli",
+          "titolo_persona": "ministro della giustizia; legge n. 117/1988",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Giuliano_Vassalli"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano inserisce la responsabilità civile dei magistrati tra le prime correzioni istituzionali.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1987-11",
+          "tipo": "referendum",
+          "descrizione": "Il referendum del novembre 1987 rimette al legislatore una nuova disciplina della responsabilità civile dei giudici.",
+          "esito": "spinta politica favorevole al cambiamento",
+          "source_keys": [
+            "magistrati_referendum_1987_camera"
+          ],
+          "source_urls": [
+            "https://leg16.camera.it/561?appro=664"
+          ]
+        },
+        {
+          "date": "1988-04-13",
+          "tipo": "legge",
+          "descrizione": "La legge n. 117 disciplina il risarcimento dei danni cagionati nell’esercizio delle funzioni giudiziarie.",
+          "esito": "attuazione legislativa del punto",
+          "source_keys": [
+            "magistrati_law_117_1988"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1988%3B117="
+          ]
+        },
+        {
+          "date": "2015-02-27",
+          "tipo": "legge",
+          "descrizione": "La legge n. 18 del 2015 modifica il regime di responsabilità civile dei magistrati.",
+          "esito": "aggiornamento della disciplina",
+          "source_keys": [
+            "magistrati_law_18_2015"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2015-02-27%3B18%21vig="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1988%3B117=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2015-02-27%3B18%21vig="
+      ]
+    },
+    {
+      "point_id": "PRD-05",
+      "area": "Giustizia",
+      "titolo": "Separazione delle carriere, riassetto del PM e del CSM",
+      "sintesi_addensata": "Il piano vuole separare magistratura giudicante e requirente, spezzare l’unità della magistratura e ridisegnare gli organi di autogoverno, ricollocando il pubblico ministero e il CSM in un quadro più dipendente dalla politica.",
+      "stato": "in corso",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "in corso": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Ci sono stati referendum, proposte e un recente testo costituzionale approvato in seconda votazione, ma al 17 marzo 2026 la riforma non è ancora in vigore perché sottoposta a referendum confermativo il 22-23 marzo 2026.",
+      "estratti_originali": [
+        "«separare le carriere requirente e giudicante»",
+        "«unità del Pubblico Ministero (a norma della Costituzione – articoli 107 e 112 ove il P.M. è distinto dai giudici)»",
+        "«riforma del Consiglio Superiore della Magistratura che deve essere responsabile verso il Parlamento (modifica costituzionale)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P10",
+          "ruolo": "ministro della giustizia e sponsor politico della riforma costituzionale sulla separazione delle carriere",
+          "nome": "Carlo Nordio",
+          "titolo_persona": "ministro della giustizia",
+          "immagine_riferimento_url": "https://www.giustizia.it/cmsresources/cms/images/Nordio_280x260_1_4_d4.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Carlo_Nordio"
+        },
+        {
+          "person_id": "P11",
+          "ruolo": "Presidente del Consiglio del Governo che ha presentato il testo A.C. 1917",
+          "nome": "Giorgia Meloni",
+          "titolo_persona": "Presidente del Consiglio dei ministri",
+          "immagine_riferimento_url": "https://www.governo.it/sites/governo.it/files/styles/650x350/public/Presidente_Meloni_Biog.jpg?itok=JXUxSQvy",
+          "link_url": "https://it.wikipedia.org/wiki/Giorgia_Meloni"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano disegna una separazione netta tra accusa e giudice, con revisione profonda del CSM.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2022-04-06",
+          "tipo": "decreto",
+          "descrizione": "È indetto il referendum sulla separazione delle funzioni dei magistrati.",
+          "esito": "tentativo referendario",
+          "source_keys": [
+            "sep_funzioni_ref_2022_decreto"
+          ],
+          "source_urls": [
+            "https://www.gazzettaufficiale.it/eli/id/2022/04/07/22A02322/SG"
+          ]
+        },
+        {
+          "date": "2022-06-12",
+          "tipo": "referendum",
+          "descrizione": "Il quesito sulla separazione delle funzioni ottiene una larga prevalenza del Sì ma non raggiunge il quorum.",
+          "esito": "tentativo fallito",
+          "source_keys": [
+            "sep_funzioni_ref_2022_risultati"
+          ],
+          "source_urls": [
+            "https://elezionistorico.interno.gov.it/index.php?dtel=12%2F06%2F2022&es0=S&lev0=0&levsut0=0&ms=S&tpa=I&tpe=A&tpel=F"
+          ]
+        },
+        {
+          "date": "2024-06-13",
+          "tipo": "disegno di legge costituzionale",
+          "descrizione": "Il Governo presenta alla Camera l’A.C. 1917 sulla separazione delle carriere.",
+          "esito": "nuovo tentativo parlamentare",
+          "source_keys": [
+            "separazione_carriere_dossier_1917"
+          ],
+          "source_urls": [
+            "https://documenti.camera.it/leg19/dossier/testi/gi0010.htm"
+          ]
+        },
+        {
+          "date": "2025-10-30",
+          "tipo": "pubblicazione in G.U.",
+          "descrizione": "Il testo di legge costituzionale approvato in seconda votazione viene pubblicato in Gazzetta Ufficiale.",
+          "esito": "testo approvato ma non definitivo",
+          "source_keys": [
+            "separazione_carriere_gu_2025"
+          ],
+          "source_urls": [
+            "https://www.gazzettaufficiale.it/eli/id/2025/10/30/25A05968/SG"
+          ]
+        },
+        {
+          "date": "2026-01-14",
+          "tipo": "decreto",
+          "descrizione": "Viene indetto il referendum confermativo per il 22-23 marzo 2026.",
+          "esito": "riforma sospesa all’esito referendario",
+          "source_keys": [
+            "separazione_carriere_ref_2026"
+          ],
+          "source_urls": [
+            "https://www.gazzettaufficiale.it/eli/id/2026/01/14/26A00167/SG"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://elezionistorico.interno.gov.it/index.php?dtel=12%2F06%2F2022&es0=S&lev0=0&levsut0=0&ms=S&tpa=I&tpe=A&tpel=F",
+        "https://documenti.camera.it/leg19/dossier/testi/gi0010.htm",
+        "https://www.gazzettaufficiale.it/eli/id/2026/01/14/26A00167/SG"
+      ]
+    },
+    {
+      "point_id": "PRD-06",
+      "area": "Istituzioni",
+      "titolo": "Investitura diretta del premier e sfiducia costruttiva",
+      "sintesi_addensata": "Il piano punta a un capo del governo investito all’inizio della legislatura e protetto da meccanismi che rendano più difficile la caduta dell’esecutivo, fino a una logica di sfiducia solo costruttiva.",
+      "stato": "in corso",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "in corso": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il disegno di legge costituzionale sul premierato è stato approvato in prima lettura dal Senato nel 2024 e, alla data del dataset, è ancora all’esame della Camera; dunque il punto resta nel campo dei tentativi.",
+      "estratti_originali": [
+        "«il Presidente del Consiglio è eletto dalla Camera all'inizio di ogni legislatura»",
+        "«può essere rovesciato soltanto attraverso le elezioni del successore»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P11",
+          "ruolo": "Presidente del Consiglio promotrice della riforma sul premierato",
+          "nome": "Giorgia Meloni",
+          "titolo_persona": "Presidente del Consiglio dei ministri",
+          "immagine_riferimento_url": "https://www.governo.it/sites/governo.it/files/styles/650x350/public/Presidente_Meloni_Biog.jpg?itok=JXUxSQvy",
+          "link_url": "https://it.wikipedia.org/wiki/Giorgia_Meloni"
+        },
+        {
+          "person_id": "P12",
+          "ruolo": "ministra per le riforme istituzionali che cura il progetto di premierato",
+          "nome": "Maria Elisabetta Alberti Casellati",
+          "titolo_persona": "Ministra per le Riforme istituzionali e la Semplificazione normativa",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elisabetta_Alberti_Casellati_cropped.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Maria_Elisabetta_Alberti_Casellati"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano prevede l’elezione del Primo ministro da parte della Camera e una maggiore stabilizzazione dell’esecutivo.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2023-11-15",
+          "tipo": "disegno di legge costituzionale",
+          "descrizione": "Il Governo presenta al Senato l’A.S. 935 sull’elezione diretta del Presidente del Consiglio.",
+          "esito": "avvio dell’iter del premierato",
+          "source_keys": [
+            "premierato_senato_935",
+            "premierato_dossier_camera"
+          ],
+          "source_urls": [
+            "https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=57694",
+            "https://temi.camera.it/leg19/dossier/OCD18-20136/disposizioni-l-introduzione-elezione-diretta-del-presidente-del-consiglio-ministri-costituzione.html"
+          ]
+        },
+        {
+          "date": "2024-06-18",
+          "tipo": "iter parlamentare",
+          "descrizione": "Il Senato approva il ddl e lo trasmette alla Camera come A.C. 1921.",
+          "esito": "prima approvazione ottenuta",
+          "source_keys": [
+            "premierato_senato_935",
+            "premierato_camera_1921"
+          ],
+          "source_urls": [
+            "https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=57694",
+            "https://www.camera.it/leg19/126?idDocumento=1921&leg=19"
+          ]
+        },
+        {
+          "date": "2026-03-17",
+          "tipo": "stato iter",
+          "descrizione": "L’A.C. 1921 risulta ancora in corso di esame in Commissione alla Camera.",
+          "esito": "riforma non approvata",
+          "source_keys": [
+            "premierato_camera_1921"
+          ],
+          "source_urls": [
+            "https://www.camera.it/leg19/126?idDocumento=1921&leg=19"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=57694",
+        "https://www.camera.it/leg19/126?idDocumento=1921&leg=19"
+      ]
+    },
+    {
+      "point_id": "PRD-07",
+      "area": "Amministrazione e territorio",
+      "titolo": "Separazione tra indirizzo politico e gestione amministrativa; silenzio-assenso",
+      "sintesi_addensata": "Il piano immagina una pubblica amministrazione più gerarchica e manageriale, con responsabilità politiche separate da quelle gestionali, dirigenti forti e procedimenti accelerati tramite generalizzazione del silenzio-assenso.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La distinzione politica/gestione è entrata nel diritto amministrativo e del lavoro pubblico, e il silenzio-assenso è un istituto generale della legge sul procedimento; resta però solo una realizzazione parziale del disegno complessivo del piano.",
+      "estratti_originali": [
+        "«netta separazione della responsabilità politica da quella amministrativa che diviene personale»",
+        "«istituzione dei Segretari Generali di Ministero»",
+        "«sostituzione del principio del silenzio-rifiuto con quello del silenzio-consenso»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P13",
+          "ruolo": "ministro simbolo della stagione di riforma amministrativa degli anni Novanta",
+          "nome": "Franco Bassanini",
+          "titolo_persona": "ministro per la funzione pubblica e gli affari regionali",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Franco_Bassanini"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano accoppia riforma dei ministeri, responsabilità dirigenziale e silenzio-assenso.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1990-08-07",
+          "tipo": "legge",
+          "descrizione": "La legge n. 241 sul procedimento amministrativo include l’istituto del silenzio-assenso, poi più volte ampliato.",
+          "esito": "attuazione parziale dell’idea di semplificazione",
+          "source_keys": [
+            "law_241_art20"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990-08-07%3B241~art20="
+          ]
+        },
+        {
+          "date": "1993-02-03",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 29 apre la stagione della distinzione tra indirizzo politico e gestione amministrativa.",
+          "esito": "attuazione importante del punto",
+          "source_keys": [
+            "dlgs_29_1993"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1993-02-03%3B29="
+          ]
+        },
+        {
+          "date": "2001-03-30",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 165 consolida il testo unico sul lavoro pubblico e la separazione di funzioni.",
+          "esito": "consolidamento del modello",
+          "source_keys": [
+            "dlgs_165_2001"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2001-03-30%3B165%21vig="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1993-02-03%3B29=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990-08-07%3B241~art20=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A2001-03-30%3B165%21vig="
+      ]
+    },
+    {
+      "point_id": "PRD-08",
+      "area": "Istituzioni",
+      "titolo": "Ministero dell’Economia e abolizione del CNEL",
+      "sintesi_addensata": "Il piano vuole concentrare il coordinamento economico in un unico Ministero dell’economia e contemporaneamente eliminare il CNEL, visto come un centro di intermediazione da sopprimere.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il Ministero dell’Economia e delle Finanze è stato effettivamente creato nel 1999, ma il CNEL esiste tuttora; la sua soppressione è stata tentata nella riforma costituzionale del 2016 e respinta dal referendum.",
+      "estratti_originali": [
+        "«un Ministero dell’economia che ingloba le attuali strutture di incentivazione»",
+        "«CNEL rivitalizzato quale punto d’incontro delle forze sociali e sindacali, imprenditoriali e culturali»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P13",
+          "ruolo": "figura chiave della stagione di riordino ministeriale che porta al MEF",
+          "nome": "Franco Bassanini",
+          "titolo_persona": "ministro per la funzione pubblica e gli affari regionali",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Franco_Bassanini"
+        },
+        {
+          "person_id": "P18",
+          "ruolo": "Presidente del Consiglio durante il tentativo di abolire il CNEL nella riforma del 2016",
+          "nome": "Matteo Renzi",
+          "titolo_persona": "presidente del Consiglio (2014-2016)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Matteo_Renzi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano accoppia il super-ministero economico con la soppressione del CNEL.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1999-07-30",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 300 ridisegna i ministeri e prepara la nascita del MEF.",
+          "esito": "attuazione del primo segmento",
+          "source_keys": [
+            "dlgs_300_1999",
+            "mef_storia"
+          ],
+          "source_urls": [
+            "https://www.rgs.mef.gov.it/_Documenti/VERSIONE-I/Selezione_normativa/D-Lgs-/DLgs30-07-1999_300.pdf",
+            "https://www.mef.gov.it/ministero/palazzo/storia.html"
+          ]
+        },
+        {
+          "date": "2001",
+          "tipo": "assetto amministrativo",
+          "descrizione": "Il Ministero dell’Economia e delle Finanze opera come fusione delle precedenti amministrazioni economiche.",
+          "esito": "MEF realizzato",
+          "source_keys": [
+            "mef_storia"
+          ],
+          "source_urls": [
+            "https://www.mef.gov.it/ministero/palazzo/storia.html"
+          ]
+        },
+        {
+          "date": "2016-12-04",
+          "tipo": "referendum costituzionale",
+          "descrizione": "Il referendum sulla riforma Renzi-Boschi, che includeva la soppressione del CNEL, respinge il testo.",
+          "esito": "abolizione del CNEL fallita",
+          "source_keys": [
+            "bicameralismo_2016_dossier",
+            "bicameralismo_2016_referendum"
+          ],
+          "source_urls": [
+            "https://www.camera.it/temiap/d/leg17/ac0500p?social-share=",
+            "https://www.interno.gov.it/it/speciali/referendum-costituzionale-4-dicembre-2016"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.mef.gov.it/ministero/palazzo/storia.html",
+        "https://www.cnel.it/Chi-Siamo/Il-CNEL",
+        "https://www.interno.gov.it/it/speciali/referendum-costituzionale-4-dicembre-2016"
+      ]
+    },
+    {
+      "point_id": "PRD-09",
+      "area": "Istituzioni",
+      "titolo": "Legge elettorale mista con forte componente uninominale",
+      "sintesi_addensata": "Il piano propone una nuova legge elettorale a prevalenza maggioritaria-uninominale, con una componente proporzionale ridotta, per irrigidire il bipolarismo e selezionare più nettamente le maggioranze.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Nel 1993 l’Italia ha adottato un sistema misto a prevalenza uninominale (Mattarellum); nel 2017 è tornata a una formula mista con il Rosatellum. Il nucleo dell’idea è entrato stabilmente nell’ingegneria elettorale italiana.",
+      "estratti_originali": [
+        "«nuove leggi elettorali, per la Camera, di tipo misto (uninominale e proporzionale secondo il modello tedesco)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P14",
+          "ruolo": "proponente storico del Mattarellum del 1993",
+          "nome": "Sergio Mattarella",
+          "titolo_persona": "Presidente della Repubblica; già proponente del Mattarellum",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Sergio_Mattarella"
+        },
+        {
+          "person_id": "P15",
+          "ruolo": "proponente del Rosatellum del 2017",
+          "nome": "Ettore Rosato",
+          "titolo_persona": "deputato; proponente del Rosatellum",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Ettore_Rosato"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano propone una legge elettorale con forte prevalenza uninominale.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1993-08-04",
+          "tipo": "leggi elettorali",
+          "descrizione": "Le leggi n. 276 e n. 277 introducono un sistema misto a forte componente maggioritaria-uninominale.",
+          "esito": "attuazione del modello Mattarellum",
+          "source_keys": [
+            "mattarellum_senato_276_1993",
+            "mattarellum_camera_277_1993"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1993%3B276=",
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto%3A1993%3B277="
+          ]
+        },
+        {
+          "date": "2017-11-03",
+          "tipo": "legge",
+          "descrizione": "La legge n. 165 del 2017 (Rosatellum) reintroduce un assetto elettorale misto per Camera e Senato.",
+          "esito": "persistenza del modello misto",
+          "source_keys": [
+            "rosatellum_165_2017"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2017%3B165="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1993%3B276=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto%3A1993%3B277=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2017%3B165="
+      ]
+    },
+    {
+      "point_id": "PRD-10",
+      "area": "Istituzioni",
+      "titolo": "Riduzione del numero dei parlamentari",
+      "sintesi_addensata": "Il piano vuole un Parlamento più piccolo e più controllabile, con una riduzione sensibile dei seggi in entrambe le Camere.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La legge costituzionale sottoposta a referendum nel 2020 ha ridotto i parlamentari da 630 a 400 deputati e da 315 a 200 senatori elettivi; i numeri non coincidono con il Piano, ma la direzione politica sì.",
+      "estratti_originali": [
+        "«riducendo il numero dei deputati a 450 [...] diminuendo a 250 il numero dei senatori»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P16",
+          "ruolo": "leader del principale partito promotore del taglio dei parlamentari",
+          "nome": "Luigi Di Maio",
+          "titolo_persona": "leader del M5S; sostenitore della riduzione dei parlamentari",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Luigi_Di_Maio"
+        },
+        {
+          "person_id": "P17",
+          "ruolo": "Presidente del Consiglio durante la fase conclusiva della riforma e del referendum",
+          "nome": "Giuseppe Conte",
+          "titolo_persona": "presidente del Consiglio (2018-2021)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Giuseppe_Conte"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano include la riduzione numerica dei parlamentari tra le correzioni costituzionali.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2020-09-20/21",
+          "tipo": "referendum costituzionale",
+          "descrizione": "Il referendum confermativo approva la riduzione del numero dei parlamentari.",
+          "esito": "attuazione del punto",
+          "source_keys": [
+            "riduzione_parlamentari_dossier",
+            "riduzione_parlamentari_risultati"
+          ],
+          "source_urls": [
+            "https://documenti.camera.it/leg18/dossier/Testi/AC0167g.htm",
+            "https://comunicazione.camera.it/archivio-prima-pagina/18-21002"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://documenti.camera.it/leg18/dossier/Testi/AC0167g.htm",
+        "https://comunicazione.camera.it/archivio-prima-pagina/18-21002"
+      ]
+    },
+    {
+      "point_id": "PRD-11",
+      "area": "Istituzioni",
+      "titolo": "Superamento del bicameralismo perfetto e differenziazione del Senato",
+      "sintesi_addensata": "Il piano vuole una Camera politicamente dominante e un Senato riposizionato su funzioni economico-territoriali, così da superare l’uguaglianza perfetta tra i due rami del Parlamento.",
+      "stato": "tentato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il tentativo più organico è stato la riforma costituzionale del 2016, respinta dal referendum; nel 2025 è stata presentata anche una proposta di Senato delle Regioni, ma senza esito finale.",
+      "estratti_originali": [
+        "«alla Camera preminenza politica (nomina del Primo Ministro)»",
+        "«al Senato preponderanza economica (esame del bilancio)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P18",
+          "ruolo": "Presidente del Consiglio del tentativo organico di superamento del bicameralismo paritario nel 2016",
+          "nome": "Matteo Renzi",
+          "titolo_persona": "presidente del Consiglio (2014-2016)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Matteo_Renzi"
+        },
+        {
+          "person_id": "P19",
+          "ruolo": "ministra per le riforme costituzionali e volto politico della riforma del 2016",
+          "nome": "Maria Elena Boschi",
+          "titolo_persona": "ministra per le riforme costituzionali e i rapporti con il Parlamento (2014-2016)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Maria_Elena_Boschi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano differenzia politicamente Camera e Senato.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2016-04",
+          "tipo": "legge costituzionale",
+          "descrizione": "Il Parlamento approva il testo che supera il bicameralismo paritario e ridisegna il Senato.",
+          "esito": "tentativo parlamentare compiuto",
+          "source_keys": [
+            "bicameralismo_2016_dossier"
+          ],
+          "source_urls": [
+            "https://www.camera.it/temiap/d/leg17/ac0500p?social-share="
+          ]
+        },
+        {
+          "date": "2016-12-04",
+          "tipo": "referendum costituzionale",
+          "descrizione": "Il referendum confermativo respinge la riforma Renzi-Boschi.",
+          "esito": "tentativo fallito",
+          "source_keys": [
+            "bicameralismo_2016_referendum"
+          ],
+          "source_urls": [
+            "https://www.interno.gov.it/it/speciali/referendum-costituzionale-4-dicembre-2016"
+          ]
+        },
+        {
+          "date": "2025-05-21",
+          "tipo": "proposta di legge costituzionale",
+          "descrizione": "Viene presentata alla Camera l’A.C. 2419 sul Senato delle Regioni.",
+          "esito": "nuovo tentativo, senza esito finale",
+          "source_keys": [
+            "senato_regioni_2419"
+          ],
+          "source_urls": [
+            "https://www.camera.it/leg19/126?idDocumento=2419&leg=19"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.camera.it/temiap/d/leg17/ac0500p?social-share=",
+        "https://www.interno.gov.it/it/speciali/referendum-costituzionale-4-dicembre-2016",
+        "https://www.camera.it/leg19/126?idDocumento=2419&leg=19"
+      ]
+    },
+    {
+      "point_id": "PRD-12",
+      "area": "Amministrazione e territorio",
+      "titolo": "Soppressione o svuotamento delle province",
+      "sintesi_addensata": "Il piano intende cancellare le province come livello politico autonomo, redistribuendone funzioni e peso decisionale ad altri livelli territoriali.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La legge Delrio del 2014 ha svuotato le province, trasformandole in enti di area vasta e introducendo l’elezione di secondo grado; la soppressione costituzionale piena non è però avvenuta.",
+      "estratti_originali": [
+        "«sopprimere le provincie e ridefinire i compiti dei Comuni»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P20",
+          "ruolo": "ministro associato alla legge n. 56/2014 sul riordino delle province",
+          "nome": "Graziano Delrio",
+          "titolo_persona": "ministro per gli affari regionali; legge 56/2014",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Graziano_Delrio"
+        },
+        {
+          "person_id": "P18",
+          "ruolo": "Presidente del Consiglio durante la stagione del riordino Delrio e del referendum del 2016",
+          "nome": "Matteo Renzi",
+          "titolo_persona": "presidente del Consiglio (2014-2016)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Matteo_Renzi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano propone la soppressione delle province.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2014-04-07",
+          "tipo": "legge",
+          "descrizione": "La legge n. 56 del 2014 ridefinisce province e città metropolitane come enti di area vasta.",
+          "esito": "svuotamento parziale delle province",
+          "source_keys": [
+            "province_law_56_2014",
+            "province_dossier_camera"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2014%3B56=",
+            "https://temi.camera.it/leg19DIL/post/19_pl18_province.html"
+          ]
+        },
+        {
+          "date": "2016-12-04",
+          "tipo": "referendum costituzionale",
+          "descrizione": "La riforma costituzionale che avrebbe completato il ridimensionamento viene respinta.",
+          "esito": "soppressione piena non realizzata",
+          "source_keys": [
+            "bicameralismo_2016_referendum"
+          ],
+          "source_urls": [
+            "https://www.interno.gov.it/it/speciali/referendum-costituzionale-4-dicembre-2016"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2014%3B56=",
+        "https://temi.camera.it/leg19DIL/post/19_pl18_province.html"
+      ]
+    },
+    {
+      "point_id": "PRD-13",
+      "area": "Istituzioni",
+      "titolo": "Mandato quinquennale del Presidente della Repubblica",
+      "sintesi_addensata": "Il piano vuole accorciare a cinque anni il mandato del Capo dello Stato, sincronizzandolo più strettamente con la durata delle legislature e riducendo l’autonomia temporale della Presidenza.",
+      "stato": "tentato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "L’art. 85 della Costituzione continua a prevedere un mandato di sette anni; nel tempo sono riemerse proposte di revisione, ma nessuna è entrata in vigore.",
+      "estratti_originali": [
+        "«ridurre a 5 anni il mandato [del Presidente della Repubblica]»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P14",
+          "ruolo": "Capo dello Stato in carica al momento del dataset e figura simbolica della durata settennale vigente",
+          "nome": "Sergio Mattarella",
+          "titolo_persona": "Presidente della Repubblica; già proponente del Mattarellum",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Sergio_Mattarella"
+        },
+        {
+          "person_id": "P18",
+          "ruolo": "riformatore istituzionale associato a proposte di riscrittura dell’assetto costituzionale",
+          "nome": "Matteo Renzi",
+          "titolo_persona": "presidente del Consiglio (2014-2016)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Matteo_Renzi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano propone la riduzione a cinque anni del mandato presidenziale.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2013-06-24",
+          "tipo": "proposta di legge costituzionale",
+          "descrizione": "Presentata alla Camera la proposta A.C. 1259 (Laffranco-Bianconi): prevede l’elezione diretta del Presidente della Repubblica e la riduzione del mandato da sette a cinque anni. Diverse proposte di centro-destra della XVII legislatura spingono verso forme semipresidenziali con allineamento del mandato presidenziale alla durata delle Camere.",
+          "esito": "tentativo non concluso — iter parlamentare non completato",
+          "source_keys": [
+            "pr_5anni_proposta_17leg"
+          ],
+          "source_urls": [
+            "https://www.camera.it/leg17/995?codice=17PDL0012260&idLegislatura=17&sezione=documenti&tipoDoc=lavori_testo_pdl"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-ii/articolo-85",
+        "https://www.camera.it/leg17/995?codice=17PDL0012260&idLegislatura=17&sezione=documenti&tipoDoc=lavori_testo_pdl"
+      ]
+    },
+    {
+      "point_id": "PRD-14",
+      "area": "Istituzioni",
+      "titolo": "Abolizione o forte attenuazione del semestre bianco",
+      "sintesi_addensata": "Il piano vuole togliere il vincolo che limita il potere di scioglimento delle Camere negli ultimi sei mesi del mandato presidenziale, così da ridurre uno spazio di equilibrio autonomo del Quirinale.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il semestre bianco non è stato abolito, ma dal 1991 è stato attenuato: il divieto non opera quando gli ultimi sei mesi del mandato presidenziale coincidono, in tutto o in parte, con gli ultimi sei mesi della legislatura.",
+      "estratti_originali": [
+        "«eliminare il semestre bianco (modifica costituzionale)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P14",
+          "ruolo": "titolare dell’organo costituzionale interessato dalla disciplina del semestre bianco",
+          "nome": "Sergio Mattarella",
+          "titolo_persona": "Presidente della Repubblica; già proponente del Mattarellum",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Sergio_Mattarella_Presidente_della_Repubblica_Italiana.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Sergio_Mattarella"
+        },
+        {
+          "person_id": "P12",
+          "ruolo": "ministra per le riforme istituzionali collegata a più recenti riscritture dell’art. 88 Cost.",
+          "nome": "Maria Elisabetta Alberti Casellati",
+          "titolo_persona": "Ministra per le Riforme istituzionali e la Semplificazione normativa",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Elisabetta_Alberti_Casellati_cropped.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Maria_Elisabetta_Alberti_Casellati"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano chiede l’abolizione del semestre bianco.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1991-11-04",
+          "tipo": "legge costituzionale",
+          "descrizione": "La legge costituzionale n. 1 del 1991 modifica l’art. 88 e introduce l’eccezione di coincidenza con la fine della legislatura.",
+          "esito": "attenuazione ma non abolizione",
+          "source_keys": [
+            "semestre_bianco_lcost_1991"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge.costituzionale%3A1991-11-04%3B1%21vig="
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge.costituzionale%3A1991-11-04%3B1%21vig=",
+        "https://www.senato.it/istituzione/la-costituzione/parte-ii/titolo-ii/articolo-88"
+      ]
+    },
+    {
+      "point_id": "PRD-15",
+      "area": "Amministrazione e territorio",
+      "titolo": "Riduzione del numero delle regioni",
+      "sintesi_addensata": "Il piano propone di ridurre il numero delle regioni, rimodellandole in base a una logica geoeconomica più che storico-identitaria.",
+      "stato": "tentato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "L’assetto a venti regioni è ancora vigente; esistono proposte di riforma costituzionale, ma nessuna è arrivata all’approvazione definitiva.",
+      "estratti_originali": [
+        "«ridurre il numero [delle regioni] e determinarne i confini secondo criteri geoeconomici più che storici»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P21",
+          "ruolo": "proponente della proposta di revisione costituzionale A.C. 277 di riduzione del numero delle regioni",
+          "nome": "Roberto Morassut",
+          "titolo_persona": "deputato; proponente della riduzione del numero delle regioni",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Roberto_Morassut"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano prevede una riduzione del numero delle regioni.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2022-10-13",
+          "tipo": "proposta di legge costituzionale",
+          "descrizione": "È presentata alla Camera l’A.C. 277 per ridurre il numero delle regioni e ridisegnarne il territorio.",
+          "esito": "tentativo non approvato — proposta non conclusa",
+          "source_keys": [
+            "riduzione_regioni_277",
+            "riduzione_regioni_testo"
+          ],
+          "source_urls": [
+            "https://www.camera.it/leg19/126?idDocumento=277&leg=19&tab=6",
+            "https://documenti.camera.it/leg19/pdl/html/leg.19.pdl.camera.277.19pdl0006320.html"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.camera.it/leg19/126?idDocumento=277&leg=19&tab=6",
+        "https://documenti.camera.it/leg19/pdl/html/leg.19.pdl.camera.277.19pdl0006320.html"
+      ]
+    },
+    {
+      "point_id": "PRD-16",
+      "area": "Previdenza",
+      "titolo": "Unificazione degli enti previdenziali e stretta pensionistica",
+      "sintesi_addensata": "Il piano vuole razionalizzare il sistema previdenziale unificando gli istituti e irrigidendo la disciplina pensionistica per contenerne il peso politico e finanziario.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "L’incorporazione in INPS delle gestioni ex INPDAP ed ex ENPALS e la riforma pensionistica del 2011-2012 realizzano una parte importante del punto, ma il riordino non ha eliminato il pluralismo delle gestioni né riproduce integralmente il disegno originario.",
+      "estratti_originali": [
+        "«unificazione di tutti gli istituti ed enti previdenziali ed assistenziali in un unico ente di sicurezza sociale»",
+        "«disciplinare e moralizzare il settore pensionistico stabilendo: il divieto del pagamento di pensioni prima dei 60 anni [...] l'eliminazione del fenomeno del cumulo di più pensioni»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P22",
+          "ruolo": "ministra del lavoro associata alla riforma pensionistica del 2011-2012",
+          "nome": "Elsa Fornero",
+          "titolo_persona": "ministra del lavoro e delle politiche sociali (2011-2013)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Elsa_Fornero"
+        },
+        {
+          "person_id": "P23",
+          "ruolo": "Presidente del Consiglio nella stagione dell’incorporazione delle gestioni e della stretta pensionistica",
+          "nome": "Mario Monti",
+          "titolo_persona": "presidente del Consiglio (2011-2013)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Mario_Monti"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano affianca unificazione previdenziale e nuova disciplina delle pensioni.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2011-12-06/22",
+          "tipo": "riforma pensionistica",
+          "descrizione": "Il decreto-legge n. 201 e la legge n. 214 del 2011 rafforzano la sostenibilità del sistema pensionistico.",
+          "esito": "stretta pensionistica attuata",
+          "source_keys": [
+            "fornero_art24_2011",
+            "fornero_law_214_2011"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legge%3A2011%3B201~art24=",
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2011%3B214="
+          ]
+        },
+        {
+          "date": "2012-01-01",
+          "tipo": "riordino gestioni",
+          "descrizione": "INPS subentra nelle gestioni ex INPDAP ed ex ENPALS.",
+          "esito": "unificazione parziale realizzata",
+          "source_keys": [
+            "inps_circ_3_2012"
+          ],
+          "source_urls": [
+            "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2012.01.circolare-numero-3-del-13-01-2012_5461.html"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A2011%3B214=",
+        "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2012.01.circolare-numero-3-del-13-01-2012_5461.html"
+      ]
+    },
+    {
+      "point_id": "PRD-17",
+      "area": "Lavoro",
+      "titolo": "Partecipazione dei lavoratori a gestione, capitale e utili",
+      "sintesi_addensata": "Il piano chiede che i lavoratori partecipino non solo al reddito ma anche alla proprietà, alla gestione e agli utili dell’impresa, in chiave di cogestione e disciplinamento del conflitto sociale.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Nel 2025 è entrata in vigore la legge n. 76 che disciplina varie forme di partecipazione gestionale, economica, finanziaria, organizzativa e consultiva dei lavoratori.",
+      "estratti_originali": [
+        "«nuova legislazione sulla partecipazione dei lavoratori alla proprietà azionaria delle imprese e sulla gestione (modello tedesco)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P24",
+          "ruolo": "promotore sindacale della legge sulla partecipazione dei lavoratori",
+          "nome": "Luigi Sbarra",
+          "titolo_persona": "già segretario generale CISL; promotore della partecipazione dei lavoratori",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Luigi_Sbarra"
+        },
+        {
+          "person_id": "P11",
+          "ruolo": "Presidente del Consiglio durante l’approvazione della legge n. 76/2025",
+          "nome": "Giorgia Meloni",
+          "titolo_persona": "Presidente del Consiglio dei ministri",
+          "immagine_riferimento_url": "https://www.governo.it/sites/governo.it/files/styles/650x350/public/Presidente_Meloni_Biog.jpg?itok=JXUxSQvy",
+          "link_url": "https://it.wikipedia.org/wiki/Giorgia_Meloni"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano collega cogestione e partecipazione dei lavoratori alla proprietà e agli utili.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2025-05-14/26",
+          "tipo": "legge",
+          "descrizione": "Il Parlamento approva definitivamente la legge n. 76/2025 sulla partecipazione dei lavoratori alla gestione, al capitale e agli utili delle imprese.",
+          "esito": "attuazione normativa del punto",
+          "source_keys": [
+            "partecipazione_senato_1407",
+            "partecipazione_law_76_2025",
+            "partecipazione_dossier_camera"
+          ],
+          "source_urls": [
+            "https://www.senato.it/leggi-e-documenti/disegni-di-legge/scheda-ddl?did=58940",
+            "https://www.normattiva.it/eli/id/2025/05/26/25G00081/CONSOLIDATED/",
+            "https://temi.camera.it/leg19/temi/disposizioni-in-materia-di-partecipazione-dei-lavoratori-al-capitale-alla-gestione-e-ai-risultati-dell-impresa-a-c-1573-a-e-abb.html"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/eli/id/2025/05/26/25G00081/CONSOLIDATED/",
+        "https://temi.camera.it/leg19/temi/disposizioni-in-materia-di-partecipazione-dei-lavoratori-al-capitale-alla-gestione-e-ai-risultati-dell-impresa-a-c-1573-a-e-abb.html"
+      ]
+    },
+    {
+      "point_id": "PRD-18",
+      "area": "Economia",
+      "titolo": "Legislazione antimonopolio",
+      "sintesi_addensata": "Il piano vuole una disciplina antimonopolistica moderna, capace di governare concentrazioni e posizioni dominanti in un’economia di mercato più regolata sul lato concorrenziale.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "La legge n. 287 del 1990 ha introdotto la disciplina italiana generale della concorrenza e ha istituito l’AGCM, che resta il perno del sistema.",
+      "estratti_originali": [
+        "«legislazione antimonopolio (modello USA)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P25",
+          "ruolo": "primo presidente dell’AGCM istituita dalla legge n. 287/1990",
+          "nome": "Francesco Saja",
+          "titolo_persona": "primo presidente dell’AGCM",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Francesco_Saja"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano chiede una nuova legislazione antimonopolio.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1990-10-10",
+          "tipo": "legge",
+          "descrizione": "La legge n. 287 disciplina la tutela della concorrenza e del mercato.",
+          "esito": "attuazione del punto",
+          "source_keys": [
+            "antitrust_law_287_1990"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990%3B287="
+          ]
+        },
+        {
+          "date": "1990",
+          "tipo": "istituzione",
+          "descrizione": "Nasce l’Autorità Garante della Concorrenza e del Mercato.",
+          "esito": "architrave istituzionale del nuovo sistema",
+          "source_keys": [
+            "agcm_chisiamo"
+          ],
+          "source_urls": [
+            "https://www.agcm.it/chi-siamo/"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Alegge%3A1990%3B287=",
+        "https://www.agcm.it/chi-siamo/"
+      ]
+    },
+    {
+      "point_id": "PRD-19",
+      "area": "Economia",
+      "titolo": "Nuova legislazione bancaria",
+      "sintesi_addensata": "Il piano vuole una disciplina bancaria aggiornata, coerente con un’economia più finanziarizzata e con un controllo più ordinato del credito.",
+      "stato": "realizzato",
+      "checklist": {
+        "realizzato": true,
+        "parzialmente realizzato": false,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il Testo unico bancario del 1993 è diventato il testo fondamentale delle leggi in materia bancaria e creditizia.",
+      "estratti_originali": [
+        "«nuova legislazione bancaria (modello francese)»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P26",
+          "ruolo": "figura chiave della stagione di riordino economico-finanziario dei primi anni Novanta",
+          "nome": "Carlo Azeglio Ciampi",
+          "titolo_persona": "presidente del Consiglio; ministro del Tesoro",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Carlo_Azeglio_Ciampi"
+        },
+        {
+          "person_id": "P13",
+          "ruolo": "riformatore amministrativo della stessa stagione di riassetto dello Stato economico",
+          "nome": "Franco Bassanini",
+          "titolo_persona": "ministro per la funzione pubblica e gli affari regionali",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Franco_Bassanini"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano inserisce tra le misure di medio periodo una nuova legislazione bancaria.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1993-09-01",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 385 del 1993 (TUB) riordina la materia bancaria e creditizia.",
+          "esito": "attuazione del punto",
+          "source_keys": [
+            "tub_pdf",
+            "tub_bdi_fonti"
+          ],
+          "source_urls": [
+            "https://www.bancaditalia.it/compiti/vigilanza/intermediari/Testo-Unico-Bancario.pdf",
+            "https://www.bancaditalia.it/compiti/risoluzione-gestione-crisi/normativa/fonti-nazionali/index.html"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.bancaditalia.it/compiti/vigilanza/intermediari/Testo-Unico-Bancario.pdf",
+        "https://www.bancaditalia.it/compiti/risoluzione-gestione-crisi/normativa/fonti-nazionali/index.html"
+      ]
+    },
+    {
+      "point_id": "PRD-20",
+      "area": "Istruzione",
+      "titolo": "Abolizione del valore legale del titolo di studio e scuola meritocratica",
+      "sintesi_addensata": "Il piano vuole smontare il valore legale dei titoli, imporre una selezione meritocratica più dura e accompagnarla con borse di studio per studenti capaci e meritevoli.",
+      "stato": "tentato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": false,
+        "tentato": true,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il valore legale dei titoli non è stato abolito, anche se periodicamente riemergono proposte in tal senso; sul versante del diritto allo studio esistono invece misure stabili di borse e sostegni per studenti meritevoli.",
+      "estratti_originali": [
+        "«abolizione della validità legale dei titoli di studio»",
+        "«selezione meritocratica»",
+        "«borse di studio ai non abbienti»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P30",
+          "ruolo": "Viceministro dell’istruzione, dell’università e della ricerca; protagonista dell’audizione al Senato del 01/02/2012 sulla proposta di abolizione del valore legale",
+          "nome": "Guido Possa",
+          "titolo_persona": "Viceministro dell’istruzione, dell’università e della ricerca",
+          "immagine_riferimento_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Guido_Possa.jpg",
+          "link_url": "https://it.wikipedia.org/wiki/Guido_Possa"
+        },
+        {
+          "person_id": "P27",
+          "ruolo": "ministra oggi collegata alle misure di diritto allo studio universitario",
+          "nome": "Anna Maria Bernini",
+          "titolo_persona": "ministra dell’Università e della ricerca",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Anna_Maria_Bernini"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano combina abolizione del valore legale e sostegni mirati ai meritevoli.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "2012-02-01",
+          "tipo": "resoconto parlamentare",
+          "descrizione": "Audizione in Senato, 16ª legislatura, 7ª Commissione permanente (Istruzione pubblica), resoconto sommario n. 350: discussione sull'abolizione del valore legale del titolo di studio, con intervento del Viceministro Guido Possa.",
+          "esito": "tentativo non approvato",
+          "source_keys": [
+            "senato_7a_commissione_2012"
+          ],
+          "source_urls": [
+            "https://www.senato.it/show-doc?tipodoc=SommComm&leg=16&id=00626901&part=doc_dc-allegato_a&parse=no&stampa=si&toc=no"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.camera.it/_dati/leg16/lavori/stampati/html/relazioni/16PDL0023530.html",
+        "https://www.mur.gov.it/it/aree-tematiche/universita/studenti-diritto-allo-studio-e-residenze/diritto-allo-studio"
+      ]
+    },
+    {
+      "point_id": "PRD-21",
+      "area": "Sanità",
+      "titolo": "Riforma ospedaliera e sanitaria",
+      "sintesi_addensata": "Il piano chiede una riforma ospedaliera ampia, volta a razionalizzare strutture, governo e finanziamento della sanità pubblica.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Il SSN è stato profondamente riformato nel 1992 e nel 1999 e continua a essere oggetto di revisione organizzativa, anche sul lato dell’assistenza territoriale; tuttavia non esiste una singola riforma coincidente con il testo originario.",
+      "estratti_originali": [
+        "«riforma ospedaliera e sanitaria sul modello tedesco»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P28",
+          "ruolo": "ministro della sanità associato al D.Lgs. n. 502/1992",
+          "nome": "Francesco De Lorenzo",
+          "titolo_persona": "ministro della sanità; riforma sanitaria del 1992",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Francesco_De_Lorenzo"
+        },
+        {
+          "person_id": "P29",
+          "ruolo": "ministra della sanità associata al D.Lgs. n. 229/1999",
+          "nome": "Rosy Bindi",
+          "titolo_persona": "ministra della sanità; riforma del 1999",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Rosy_Bindi"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Il Piano include la riforma ospedaliera tra i programmi di medio termine.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1992-12-30",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 502 riordina la disciplina in materia sanitaria.",
+          "esito": "prima grande riforma del SSN successiva al Piano",
+          "source_keys": [
+            "health_502_1992",
+            "health_ssn_evoluzione"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1992%3B502=",
+            "https://www.salute.gov.it/new/it/tema/ssn-principi-e-organizzazione/ssn-nascita-ed-evoluzione/"
+          ]
+        },
+        {
+          "date": "1999-06-19",
+          "tipo": "decreto legislativo",
+          "descrizione": "Il d.lgs. n. 229 razionalizza il Servizio sanitario nazionale.",
+          "esito": "seconda riforma organica",
+          "source_keys": [
+            "health_229_1999",
+            "health_ssn_evoluzione"
+          ],
+          "source_urls": [
+            "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1999%3B229=",
+            "https://www.salute.gov.it/new/it/tema/ssn-principi-e-organizzazione/ssn-nascita-ed-evoluzione/"
+          ]
+        },
+        {
+          "date": "2022-2026",
+          "tipo": "riforma organizzativa",
+          "descrizione": "La riforma dell’assistenza territoriale punta a un modello di sanità più vicino alle persone e più uniforme sul territorio.",
+          "esito": "ulteriore evoluzione del sistema",
+          "source_keys": [
+            "health_riforma_territoriale"
+          ],
+          "source_urls": [
+            "https://www.salute.gov.it/new/it/tema/nuova-assistenza-distrettuale/riforma-dellassistenza-territoriale/"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1992%3B502=",
+        "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1999%3B229=",
+        "https://www.salute.gov.it/new/it/tema/nuova-assistenza-distrettuale/riforma-dellassistenza-territoriale/"
+      ]
+    }
+  ]
+}
