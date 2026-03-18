@@ -518,14 +518,60 @@ body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);min-
   .checklist-item:hover,.checklist-item.sel{margin:0 -.5rem;padding-left:.5rem;padding-right:.5rem}
 }
 @media(max-width:640px){
-  .navbar{padding:0 1rem;gap:1rem}
-  .nav-sub{display:none}
+  /* Two-row navbar: --nav-h updated so all sticky/offset calcoli si aggiornano */
+  :root{--nav-h:92px}
+  .navbar{
+    flex-wrap:wrap;height:auto;
+    padding:.55rem 1rem .45rem;
+    gap:.2rem .8rem;
+    align-items:center
+  }
+  .nav-logo{height:24px}
+  .nav-brand{
+    flex:1 0 calc(100% - 38px);
+    min-width:0
+  }
+  .nav-title{
+    font-size:.95rem;
+    white-space:normal;
+    line-height:1.25
+  }
+  .nav-sub{
+    display:block;
+    font-size:.6rem;
+    color:var(--faint);
+    white-space:normal;
+    line-height:1.4
+  }
+  .nav-right{
+    width:100%;
+    gap:.45rem;
+    flex-shrink:1;
+    flex-wrap:wrap
+  }
+  .snap-date{display:none}
+  .legend-btn,.parl-btn{
+    font-size:.63rem;
+    padding:.22rem .5rem
+  }
+  /* Controls + checklist */
   .controls{padding:.65rem 1rem}
-  .sidebar{width:100vw}
+  .checklist{padding:0 1rem}
+  /* Sidebar */
+  .sidebar{width:100vw;overflow-x:hidden}
   .sb-body{padding:.9rem 1rem}
   .sb-people-strip{padding:.9rem 1rem .8rem}
+  .sb-two-col{grid-template-columns:1fr}
+  /* you-badge: sopra l'item invece che a destra su mobile */
+  .you-badge{left:auto;right:0;top:0;transform:translateY(-110%)}
+  .you-badge::before{right:auto;left:50%;top:100%;transform:translateX(-50%);
+    border-right:6px solid transparent;border-left:6px solid transparent;
+    border-top:6px solid #C82828;border-bottom:none}
+  /* Modals */
   .text-modal-panel{width:100vw;height:100dvh;border-radius:0}
   .piano-doc{padding:1.2rem 1.2rem 2rem}
+  .parl-panel{width:100vw;max-height:100dvh;border-radius:0}
+  .about-panel{width:100vw;max-height:100dvh;border-radius:0}
 }
 </style>
 </head>
