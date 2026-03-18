@@ -2087,14 +2087,14 @@
       "area": "Partiti e sistema politico",
       "titolo": "Nascita di due movimenti contrapposti, uno a sinistra e uno a destra",
       "sintesi_addensata": "Il piano prevede che, se i partiti esistenti non risultano più credibili, si favorisca la nascita immediata di due movimenti contrapposti: uno sulla sinistra e uno sulla destra, così da ridisegnare il sistema politico in senso bipolare.",
-      "stato": "parzialmente realizzato",
+      "stato": "realizzato",
       "checklist": {
-        "realizzato": false,
-        "parzialmente realizzato": true,
+        "realizzato": true,
+        "parzialmente realizzato": false,
         "tentato": false,
         "non ancora proposto": false
       },
-      "motivazione_stato": "Dopo la crisi del sistema dei partiti della Prima Repubblica, l'Italia ha conosciuto una lunga fase di bipolarizzazione: a destra attorno a Forza Italia di Silvio Berlusconi; a sinistra attorno al PDS e poi all'Ulivo con figure come Achille Occhetto, Romano Prodi e Massimo D'Alema. Tuttavia l'esito storico non coincide pienamente con il disegno originario di due movimenti netti e definitivi, ma con poli e coalizioni evolutive.",
+      "motivazione_stato": "Il sistema politico italiano della Seconda Repubblica si è strutturato attorno a due poli contrapposti: a destra il Polo delle Libertà/Casa delle Libertà poi confluito nel PDL; a sinistra l'Ulivo poi confluito nel PD. Entrambi i movimenti hanno assunto un ruolo stabile e alternante nel governo del paese, realizzando di fatto il disegno bipolare indicato nel Piano.",
       "estratti_originali": [
         "«in caso di risposta negativa usare gli strumenti finanziari stessi per l'immediata nascita di due movimenti: l'uno, sulla sinistra (a cavallo fra PSI-PSDI-PRI-Liberali di sinistra e DC di sinistra), e l'altra sulla destra (a cavallo fra DC conservatori, liberali e democratici della Destra Nazionale).»"
       ],
