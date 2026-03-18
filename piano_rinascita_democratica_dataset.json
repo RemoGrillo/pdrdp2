@@ -62,7 +62,7 @@
       "titolo": "imprenditore televisivo; leader del centrodestra; poi presidente del Consiglio",
       "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
       "fonte_bio_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
-      "note": "Figura centrale nel consolidamento dell'emittenza privata nazionale e fondatore del polo di centrodestra nella Seconda Repubblica; fondatore di Forza Italia nel 1994.",
+      "note": "Membro della loggia P2 (tessera n. 1816). Figura centrale nel consolidamento dell'emittenza privata nazionale e fondatore del polo di centrodestra nella Seconda Repubblica; fondatore di Forza Italia nel 1994.",
       "partito": "Forza Italia",
       "spettro_politico": 68
     },
@@ -389,7 +389,7 @@
         },
         {
           "person_id": "P05",
-          "ruolo": "imprenditore televisivo protagonista dell’espansione delle reti private nazionali",
+          "ruolo": "imprenditore televisivo protagonista dell’espansione delle reti private nazionali; membro della loggia P2",
           "nome": "Silvio Berlusconi",
           "titolo_persona": "imprenditore televisivo; poi presidente del Consiglio",
           "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi"
@@ -1167,7 +1167,7 @@
         "tentato": false,
         "non ancora proposto": false
       },
-      "motivazione_stato": "La legge costituzionale sottoposta a referendum nel 2020 ha ridotto i parlamentari da 630 a 400 deputati e da 315 a 200 senatori elettivi; i numeri non coincidono con il Piano, ma la direzione politica sì.",
+      "motivazione_stato": "La legge costituzionale approvata per referendum nel 2020 ha tagliato i parlamentari a 400 deputati e 200 senatori elettivi — numeri persino più ridotti rispetto ai 450 e 250 indicati nel Piano. Il risultato supera quantitativamente le ambizioni originarie: l'Italia si è data un Parlamento ancora più compresso di quello che Gelli aveva in mente.",
       "estratti_originali": [
         "«riducendo il numero dei deputati a 450 [...] diminuendo a 250 il numero dei senatori»"
       ],
@@ -2104,7 +2104,7 @@
       "people": [
         {
           "person_id": "P05",
-          "ruolo": "leader del polo di centrodestra; fondatore di Forza Italia",
+          "ruolo": "leader del polo di centrodestra; fondatore di Forza Italia; membro della loggia P2",
           "nome": "Silvio Berlusconi",
           "titolo_persona": "imprenditore televisivo; leader del centrodestra; poi presidente del Consiglio",
           "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi"
