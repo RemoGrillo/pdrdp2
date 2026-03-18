@@ -586,6 +586,7 @@ body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);min-
   </div>
   <div class="nav-right">
     <span class="snap-date" id="snap-date"></span>
+    <button class="legend-btn" onclick="openTextModal(null)">Testo originale</button>
     <button class="legend-btn" onclick="openAbout()">About</button>
     <button class="parl-btn" onclick="openParl()">
       <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M7.5 1.2C4.2 1.2 1.5 4.2 1.5 7.8L13.5 7.8C13.5 4.2 10.8 1.2 7.5 1.2Z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round"/><line x1="1.5" y1="9.8" x2="13.5" y2="9.8" stroke="currentColor" stroke-width="1.2"/><line x1="3.5" y1="5.2" x2="3.5" y2="7.8" stroke="currentColor" stroke-width=".9"/><line x1="7.5" y1="3" x2="7.5" y2="7.8" stroke="currentColor" stroke-width=".9"/><line x1="11.5" y1="5.2" x2="11.5" y2="7.8" stroke="currentColor" stroke-width=".9"/></svg>
@@ -701,8 +702,8 @@ body{font-family:'Roboto',sans-serif;background:var(--bg);color:var(--text);min-
       </div>
 
       <h2>Scopo</h2>
-      <p>Il <em>Piano di Rinascita Democratica</em> fu redatto da Licio Gelli tra il 1975 e il 1976 come documento programmatico della loggia massonica P2. Identificava 21 obiettivi di riforma in campo politico, istituzionale, economico, mediatico e giudiziario, con l'intento di ridisegnare l'architettura del potere in Italia.</p>
-      <p>Questo strumento mappa sistematicamente ciascuno dei 21 punti, verifica in che misura sia stato realizzato nell'Italia repubblicana attraverso leggi, riforme costituzionali e atti parlamentari documentati, e identifica le figure politiche che — consapevolmente o meno — ne hanno perseguito le direttrici.</p>
+      <p>Il <em>Piano di Rinascita Democratica</em> fu redatto da Licio Gelli tra il 1975 e il 1976 come documento programmatico della loggia massonica P2. Identificava obiettivi di riforma in campo politico, istituzionale, economico, mediatico e giudiziario, con l'intento di ridisegnare l'architettura del potere in Italia.</p>
+      <p>Questo strumento mappa sistematicamente ciascuno dei 22 punti analitici individuati, verifica in che misura sia stato realizzato nell'Italia repubblicana attraverso leggi, riforme costituzionali e atti parlamentari documentati, e identifica le figure politiche che — consapevolmente o meno — ne hanno perseguito le direttrici.</p>
       <p>L'analisi è storica e analitica, non giuridica: lo stato assegnato a ciascun punto è una valutazione critica basata su fonti normative e parlamentari, non una certificazione di collusione o di intenzionalità.</p>
 
       <h2>Cosa non è incluso — le stragi</h2>
@@ -754,6 +755,7 @@ const AREA_COLOR={
   'Economia':'#88A870',
   'Istruzione':'#C09878',
   'Sanità':'#68A898',
+  'Partiti e sistema politico':'#9878B8',
 };
 
 const TIPO_STYLE={
@@ -1437,6 +1439,7 @@ const PARTY_COLOR={
   'M5S':'#E8B800','Italia Viva':'#D8009A','indipendente':'#6888A0',
   'centro (Scelta Civica)':'#80B8D8','area centro-destra':'#4A6FBC',
   'n.d.':'#706050','PLI':'#1848A0','PdL':'#004898',
+  'PDS':'#C03028','Ulivo':'#6A9040','PDS / Ulivo':'#8A6038',
 };
 const PARL_ROWS=[{r:88,n:13},{r:126,n:19},{r:164,n:24},{r:202,n:30},{r:240,n:35},{r:278,n:40}];
 const PARL_CX=430,PARL_CY=305,PARL_SEAT_R=7.5;

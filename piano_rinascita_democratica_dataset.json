@@ -59,10 +59,10 @@
     {
       "person_id": "P05",
       "nome": "Silvio Berlusconi",
-      "titolo": "imprenditore televisivo; poi presidente del Consiglio",
+      "titolo": "imprenditore televisivo; leader del centrodestra; poi presidente del Consiglio",
       "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
       "fonte_bio_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi",
-      "note": "Figura centrale nel consolidamento dell’emittenza privata nazionale.",
+      "note": "Figura centrale nel consolidamento dell'emittenza privata nazionale e fondatore del polo di centrodestra nella Seconda Repubblica; fondatore di Forza Italia nel 1994.",
       "partito": "Forza Italia",
       "spettro_politico": 68
     },
@@ -319,6 +319,36 @@
       "note": "Presente all'audizione del 01/02/2012 al Senato sulla proposta di abolizione del valore legale del titolo di studio.",
       "partito": "PdL",
       "spettro_politico": 75
+    },
+    {
+      "person_id": "P31",
+      "nome": "Romano Prodi",
+      "titolo": "leader dell'Ulivo; presidente del Consiglio (1996-1998, 2006-2008)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Romano_Prodi",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Romano_Prodi",
+      "note": "Figura federatrice del polo di centrosinistra; leader dell'Ulivo e della coalizione che vince le elezioni del 1996.",
+      "partito": "Ulivo",
+      "spettro_politico": 46
+    },
+    {
+      "person_id": "P32",
+      "nome": "Achille Occhetto",
+      "titolo": "ultimo segretario del PCI; primo segretario del PDS",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Achille_Occhetto",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Achille_Occhetto",
+      "note": "Figura di transizione dalla tradizione comunista al nuovo contenitore della sinistra post-PCI; primo segretario del PDS.",
+      "partito": "PDS",
+      "spettro_politico": 34
+    },
+    {
+      "person_id": "P33",
+      "nome": "Massimo D'Alema",
+      "titolo": "segretario del PDS; promotore dell'Ulivo; presidente del Consiglio (1998-2000)",
+      "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Massimo_D%27Alema",
+      "fonte_bio_url": "https://it.wikipedia.org/wiki/Massimo_D%27Alema",
+      "note": "Snodo politico della trasformazione del PDS e della stagione dell'Ulivo; tra i principali protagonisti del centrosinistra pre-PD.",
+      "partito": "PDS / Ulivo",
+      "spettro_politico": 38
     }
   ],
   "points": [
@@ -2050,6 +2080,123 @@
         "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1992%3B502=",
         "https://www.normattiva.it/uri-res/N2Ls?urn%3Anir%3Astato%3Adecreto.legislativo%3A1999%3B229=",
         "https://www.salute.gov.it/new/it/tema/nuova-assistenza-distrettuale/riforma-dellassistenza-territoriale/"
+      ]
+    },
+    {
+      "point_id": "PRD-22",
+      "area": "Partiti e sistema politico",
+      "titolo": "Nascita di due movimenti contrapposti, uno a sinistra e uno a destra",
+      "sintesi_addensata": "Il piano prevede che, se i partiti esistenti non risultano più credibili, si favorisca la nascita immediata di due movimenti contrapposti: uno sulla sinistra e uno sulla destra, così da ridisegnare il sistema politico in senso bipolare.",
+      "stato": "parzialmente realizzato",
+      "checklist": {
+        "realizzato": false,
+        "parzialmente realizzato": true,
+        "tentato": false,
+        "non ancora proposto": false
+      },
+      "motivazione_stato": "Dopo la crisi del sistema dei partiti della Prima Repubblica, l'Italia ha conosciuto una lunga fase di bipolarizzazione: a destra attorno a Forza Italia di Silvio Berlusconi; a sinistra attorno al PDS e poi all'Ulivo con figure come Achille Occhetto, Romano Prodi e Massimo D'Alema. Tuttavia l'esito storico non coincide pienamente con il disegno originario di due movimenti netti e definitivi, ma con poli e coalizioni evolutive.",
+      "estratti_originali": [
+        "«in caso di risposta negativa usare gli strumenti finanziari stessi per l'immediata nascita di due movimenti: l'uno, sulla sinistra (a cavallo fra PSI-PSDI-PRI-Liberali di sinistra e DC di sinistra), e l'altra sulla destra (a cavallo fra DC conservatori, liberali e democratici della Destra Nazionale).»"
+      ],
+      "original_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2"
+      ],
+      "people": [
+        {
+          "person_id": "P05",
+          "ruolo": "leader del polo di centrodestra; fondatore di Forza Italia",
+          "nome": "Silvio Berlusconi",
+          "titolo_persona": "imprenditore televisivo; leader del centrodestra; poi presidente del Consiglio",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Silvio_Berlusconi"
+        },
+        {
+          "person_id": "P32",
+          "ruolo": "primo segretario del PDS, principale contenitore della sinistra post-PCI",
+          "nome": "Achille Occhetto",
+          "titolo_persona": "ultimo segretario del PCI; primo segretario del PDS",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Achille_Occhetto"
+        },
+        {
+          "person_id": "P31",
+          "ruolo": "leader dell'Ulivo, coalizione cardine del centrosinistra",
+          "nome": "Romano Prodi",
+          "titolo_persona": "leader dell'Ulivo; presidente del Consiglio (1996-1998, 2006-2008)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Romano_Prodi"
+        },
+        {
+          "person_id": "P33",
+          "ruolo": "segretario del PDS e protagonista della stagione dell'Ulivo",
+          "nome": "Massimo D'Alema",
+          "titolo_persona": "segretario del PDS; promotore dell'Ulivo; presidente del Consiglio (1998-2000)",
+          "immagine_riferimento_url": "https://it.wikipedia.org/wiki/Massimo_D%27Alema"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1975-1976",
+          "tipo": "documento",
+          "descrizione": "Nel Piano compare l'ipotesi di favorire la nascita di due movimenti contrapposti, uno sulla sinistra e uno sulla destra, nel caso in cui le formazioni politiche esistenti non siano più credibili.",
+          "esito": "obiettivo formulato",
+          "source_keys": [
+            "original_plan",
+            "p2_commission"
+          ],
+          "source_urls": [
+            "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+            "https://inchieste.camera.it/p2/documenti.html?leg=09&legLabel=IX+legislatura"
+          ]
+        },
+        {
+          "date": "1991-02",
+          "tipo": "partito",
+          "descrizione": "Nasce il PDS come nuova formazione della sinistra post-PCI, con Achille Occhetto come primo segretario.",
+          "esito": "primo grande contenitore della sinistra nella nuova fase politica",
+          "source_keys": [
+            "treccani_pds",
+            "treccani_occhetto"
+          ],
+          "source_urls": [
+            "https://www.treccani.it/enciclopedia/partito-democratico-della-sinistra_%28Dizionario-di-Storia%29/",
+            "https://www.treccani.it/enciclopedia/achille-occhetto_%28Dizionario-di-Storia%29/"
+          ]
+        },
+        {
+          "date": "1994",
+          "tipo": "partito",
+          "descrizione": "Forza Italia, fondata da Silvio Berlusconi, aggrega il polo di centrodestra in opposizione alle sinistre.",
+          "esito": "avvio del polo di destra nella Seconda Repubblica",
+          "source_keys": [
+            "treccani_forza_italia",
+            "treccani_berlusconi"
+          ],
+          "source_urls": [
+            "https://www.treccani.it/enciclopedia/forza-italia_%28Dizionario-di-Storia%29/",
+            "https://www.treccani.it/enciclopedia/silvio-berlusconi/"
+          ]
+        },
+        {
+          "date": "1995",
+          "tipo": "coalizione",
+          "descrizione": "Si costituisce l'Ulivo, coalizione di centrosinistra guidata da Romano Prodi e fondata anche sul PDS.",
+          "esito": "consolidamento del polo di sinistra/centrosinistra",
+          "source_keys": [
+            "treccani_ulivo",
+            "treccani_prodi",
+            "treccani_dalema"
+          ],
+          "source_urls": [
+            "https://www.treccani.it/enciclopedia/l-ulivo/",
+            "https://www.treccani.it/enciclopedia/romano-prodi/",
+            "https://www.treccani.it/enciclopedia/massimo-d-alema/"
+          ]
+        }
+      ],
+      "main_source_urls": [
+        "https://it.wikisource.org/wiki/Piano_di_rinascita_democratica_della_Loggia_P2",
+        "https://www.treccani.it/enciclopedia/partito-democratico-della-sinistra_%28Dizionario-di-Storia%29/",
+        "https://www.treccani.it/enciclopedia/l-ulivo/",
+        "https://www.treccani.it/enciclopedia/forza-italia_%28Dizionario-di-Storia%29/",
+        "https://www.treccani.it/enciclopedia/silvio-berlusconi/"
       ]
     }
   ]
